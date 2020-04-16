@@ -11,6 +11,8 @@
     "gatsby-plugin-offline": "^3.1.2",
     "gatsby-plugin-react-helmet": "^3.2.2",
     "gatsby-plugin-sharp": "^2.5.3",
+    "gatsby-plugin-sitemap": "^2.3.3",
+    "gatsby-plugin-styled-components": "^3.2.2",
     "gatsby-source-filesystem": "^2.2.2",
     "gatsby-transformer-sharp": "^2.4.3",
     "prop-types": "^15.7.2",
@@ -36,9 +38,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/kyfelipe/fcortes.com.br"
   },
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/kyfelipe/fcortes.com.br/issues"
   }
 }
