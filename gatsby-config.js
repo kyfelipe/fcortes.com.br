@@ -6,7 +6,7 @@ module.exports = {
     siteUrl: 'https://fcortes.com.br'
   },
   plugins: [
-    // `gatsby-plugin-styled-components`,
+    `gatsby-plugin-styled-components`,
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -20,6 +20,15 @@ module.exports = {
       options: {
         name: `posts`,
         path: `${__dirname}/static/assets/posts`
+      }
+    },
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [
+          `Raleway`,
+        ],
+        display: 'swap'
       }
     },
     `gatsby-transformer-sharp`,
