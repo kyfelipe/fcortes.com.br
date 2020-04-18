@@ -27,7 +27,7 @@ export const NavbarLink = styled(Link)`
   margin: 0 .5rem;
   text-decoration: none;
   color: #212121;
-  font-weight: 500;
+  font-weight: 700;
   
   &.active {
     color: #1B68BF;
@@ -56,6 +56,7 @@ export const Logo = styled.img`
 
 export const LogoName = styled.div`
   position: absolute;
+  line-height: 1.1;
   z-index: 1;
   font-family: 'Raleway', sans-serif;
   font-weight: bold;
@@ -71,9 +72,10 @@ export const LogoName = styled.div`
       -webkit-transform: translateX(0);
               transform: translateX(0);
     }
+    
     100% {
-      -webkit-transform: translateX(50px);
-              transform: translateX(50px);
+      -webkit-transform: translateX(51px);
+              transform: translateX(51px);
     }
   }
   @keyframes slide-right {
@@ -81,9 +83,10 @@ export const LogoName = styled.div`
       -webkit-transform: translateX(0);
               transform: translateX(0);
     }
+    
     100% {
-      -webkit-transform: translateX(50px);
-              transform: translateX(50px);
+      -webkit-transform: translateX(51px);
+              transform: translateX(51px);
     }
   }
 `;
