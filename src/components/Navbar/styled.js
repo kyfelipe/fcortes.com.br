@@ -10,8 +10,8 @@ export const NavbarContent = styled.div`
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  background: white;
-  color: #212121;
+  background: var(--background);
+  color: var(--texts);
   margin: 0 auto;
   max-width: 960px;
   padding: .75rem 1.45rem;
@@ -26,11 +26,11 @@ export const LinkWrapper = styled.div`
 export const NavbarLink = styled(Link)`
   margin: 0 .5rem;
   text-decoration: none;
-  color: #212121;
+  color: var(--texts);
   font-weight: 700;
   
   &.active {
-    color: #1B68BF;
+    color: var(--highlight);
   }
 `;
 
@@ -43,7 +43,7 @@ export const LogoWrapper = styled(Link)`
 
 export const LogoLink = styled.div`
   z-index: 2;
-  background-color: white;
+  background-color: var(--background);
   padding-right: 11px;
 `;
 
@@ -61,7 +61,7 @@ export const LogoName = styled.div`
   font-family: 'Raleway', sans-serif;
   font-weight: bold;
   font-size: 1.05rem;
-  color: #212121;
+  color: var(--texts);
   user-select: none;
   
   -webkit-animation: slide-right 500ms cubic-bezier(0.250, 0.460, 0.450, 0.940) 300ms both;

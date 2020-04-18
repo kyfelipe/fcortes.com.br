@@ -83,17 +83,17 @@ const GlobalStyles = createGlobalStyle`
   //  --white: #fff;
   //  --black: #222;
   //}
-  //
-  //body.light {
-  //  --borders: #dedede;
-  //  --postColor: #111;
-  //  --texts: #555555;
-  //  --highlight: #1fa1f2;
-  //  --mediumBackground: #f0f0f3;
-  //  --background: #fff;
-  //  --white: #fff;
-  //  --black: #222;
-  //}
+
+  body { // .light
+    //--borders: #dedede;
+    //--postColor: #111;
+    --texts: #212121;
+    --highlight: #1B68BF;
+    //--mediumBackground: #f0f0f3;
+    --background: #FFFFFF;
+    --white: #FFFFFF;
+    --black: #212121;
+  }
 `;
 
 export default GlobalStyles;

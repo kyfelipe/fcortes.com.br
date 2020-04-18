@@ -7,7 +7,7 @@ import * as S from './styled'
 const Navbar = () => {
   const links = [
     {
-      name: `Home`,
+      name: `Blog`,
       path: `/`
     },
     {
