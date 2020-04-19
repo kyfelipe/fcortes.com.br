@@ -4,6 +4,7 @@ import { graphql, useStaticQuery } from 'gatsby'
 import Layout from '../layouts/page'
 import SEO from '../components/seo'
 import PostItem from '../components/PostItem'
+import PostMain from '../components/PostMain'
 
 import * as S from '../components/PostList/styled'
 
@@ -38,6 +39,7 @@ const IndexPage = () => {
   `);
 
   const postList = allMarkdownRemark.edges;
+  const mainPost = postList[0].node;
 
   return (
     <Layout>
@@ -46,6 +48,18 @@ const IndexPage = () => {
         description={``}
         keywords={[`gatsby`, `application`, `react`]}
       />
+      <S.PostMainWrapper>
+        <PostMain
+          title={mainPost.frontmatter.title}
+          description={mainPost.frontmatter.description}
+          category={mainPost.frontmatter.category}
+          timeToRead={mainPost.timeToRead}
+          author={mainPost.frontmatter.author}
+          date={mainPost.frontmatter.date}
+          slug={mainPost.fields.slug}
+          featuredImage={mainPost.frontmatter.featuredImage.childImageSharp.fluid}
+        />
+      </S.PostMainWrapper>
       <S.ListWrapper>
         {postList.map((
           {
@@ -80,9 +94,10 @@ const IndexPage = () => {
                 slug={slug}
                 featuredImage={fluid}
               />
-            )
+            );
+          } else {
+            return (<></>);
           }
-          return (<div></div>);
         })}
       </S.ListWrapper>
     </Layout>
