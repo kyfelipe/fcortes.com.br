@@ -2,8 +2,9 @@
 date: 2015-01-03 05:54:23
 title: Two things are infinite
 description: And I'm not sure about the universe
+author: Felipe Côrtes
 category: Misc
-background: "#7AAB13"
+featuredImage: ../img/2.jpg
 ---
 
 # Lorem ipsum

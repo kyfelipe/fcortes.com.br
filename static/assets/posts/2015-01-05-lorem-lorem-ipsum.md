@@ -2,8 +2,9 @@
 date: 2015-01-05 05:54:23
 title: Lorem lorem ipsum
 description: And I'm lorem sure lorem
+author: Felipe Côrtes
 category: JS
-background: "#d6ba32"
+featuredImage: ../img/3.jpg
 ---
 
 # Lorem ipsum

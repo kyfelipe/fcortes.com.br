@@ -31,6 +31,29 @@ module.exports = {
         display: 'swap'
       }
     },
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-relative-images`,
+            options: {
+              name: `images` // `uploads`
+            }
+          },
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 960,
+              linkImagesToOriginal: false,
+              showCaptions: true
+            }
+          },
+          `gatsby-remark-lazy-load`,
+          `gatsby-remark-prismjs`
+        ]
+      },
+    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
