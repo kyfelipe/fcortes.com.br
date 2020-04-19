@@ -1,5 +1,5 @@
 import React from 'react'
-import { graphql, useStaticQuery } from 'gatsby'
+import { graphql } from 'gatsby'
 
 import Layout from '../layouts/page'
 import SEO from '../components/seo'
@@ -8,38 +8,15 @@ import PostMain from '../components/PostMain'
 
 import * as S from '../components/PostList/styled'
 
-const IndexPage = () => {
-  const { allMarkdownRemark } = useStaticQuery(graphql`
-    query PostList {
-      allMarkdownRemark(sort: { fields: frontmatter___date, order: DESC }) {
-        edges {
-          node {
-            frontmatter {
-              author
-              category
-              date(formatString: "MMM DD[,] YYYY", locale: "pt-br")
-              description
-              title
-              featuredImage {
-                childImageSharp {
-                  fluid {
-                    ...GatsbyImageSharpFluid
-                  }
-                }
-              }
-            }
-            timeToRead
-            fields {
-              slug
-            }
-          }
-        }
-      }
-    }
-  `);
-
-  const postList = allMarkdownRemark.edges;
+const BlogList = props => {
+  const postList = props.data.allMarkdownRemark.edges;
   const mainPost = postList[0].node;
+
+  const { currentPage, numPages } = props.pageContext;
+  const isFirst = currentPage === 1;
+  const isLast = currentPage === numPages;
+  const prevPage = currentPage -1 === 1 ? '/' : `/page/${currentPage - 1}`;
+  const nextPage = `/page/${currentPage + 1}`;
 
   return (
     <Layout>
@@ -104,4 +81,37 @@ const IndexPage = () => {
   );
 }
 
-export default IndexPage;
+export const query = graphql`
+  query PostList($skip: Int!, $limit: Int!) {
+    allMarkdownRemark(
+      sort: { fields: frontmatter___date, order: DESC },
+      limit: $limit,
+      skip: $skip
+    ) {
+      edges {
+        node {
+          frontmatter {
+            author
+            category
+            date(formatString: "MMM DD[,] YYYY", locale: "pt-br")
+            description
+            title
+            featuredImage {
+              childImageSharp {
+                fluid {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+          }
+          timeToRead
+          fields {
+            slug
+          }
+        }
+      }
+    }
+  }
+`;
+
+export default BlogList;

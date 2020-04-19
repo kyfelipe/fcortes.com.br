@@ -27,26 +27,69 @@ exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions;
 
   return graphql(`
-    {
-    allMarkdownRemark {
-      edges {
-        node {
-          fields {
-            slug
+    query PostList {
+      allMarkdownRemark(sort: { fields: frontmatter___date, order: DESC }) {
+        edges {
+          node {
+            frontmatter {
+              author
+              category
+              date(formatString: "MMM DD[,] YYYY", locale: "pt-br")
+              description
+              title
+            }
+            timeToRead
+            fields {
+              slug
+            }
+          }
+          next {
+            frontmatter {
+              title
+            }
+            fields {
+              slug
+            }
+          }
+          previous {
+            fields {
+              slug
+            }
+            frontmatter {
+              title
+            }
           }
         }
       }
     }
-  }
   `).then(result => {
-    result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+    const posts = result.data.allMarkdownRemark.edges;
+    posts.forEach(({ node, next, previous }) => {
       createPage({
         path: node.fields.slug,
         component: path.resolve('./src/layouts/blog-posts.js'),
         context: {
           slug: node.fields.slug,
+          previousPost: next,
+          nextPost: previous
         }
-      })
-    })
+      });
+    });
+
+    const postPerPage = 4;
+    const numPages = Math.ceil(posts.length / postPerPage);
+
+    Array.from({ length: numPages }).forEach((_, index) => {
+      createPage({
+        path: index === 0 ? `/` : `/page/${index + 1}`,
+        component: path.resolve('./src/layouts/blog-list.js'),
+        context: {
+          limit: postPerPage,
+          skip: index * postPerPage,
+          numPages,
+          currentPage: index + 1
+        }
+      });
+    });
   });
 }
