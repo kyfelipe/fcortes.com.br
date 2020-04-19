@@ -5,6 +5,7 @@ import Layout from '../layouts/page'
 import SEO from '../components/seo'
 import PostItem from '../components/PostItem'
 import PostMain from '../components/PostMain'
+import Pagination from '../components/Pagination'
 
 import * as S from '../components/PostList/styled'
 
@@ -77,6 +78,14 @@ const BlogList = props => {
           }
         })}
       </S.ListWrapper>
+      <Pagination
+        isFirst={isFirst}
+        isLast={isLast}
+        currentPage={currentPage}
+        numPages={numPages}
+        prevPage={prevPage}
+        nextPage={nextPage}
+      />
     </Layout>
   );
 }
