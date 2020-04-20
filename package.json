@@ -2,7 +2,7 @@
   "name": "fcortes.com.br",
   "private": true,
   "description": "Meu blog sobre devops",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "author": "Felipe Côrtes <contatos.cortes@gmail.com>",
   "dependencies": {
     "gatsby": "^2.20.12",

@@ -78,6 +78,7 @@ export const LogoName = styled.div`
               transform: translateX(51px);
     }
   }
+  
   @keyframes slide-right {
     0% {
       -webkit-transform: translateX(0);

@@ -33,6 +33,8 @@ const GlobalStyles = createGlobalStyle`
   }
   
   body {
+    position: relative;
+    min-height: 100vh;
     line-height: 1;
   }
   
