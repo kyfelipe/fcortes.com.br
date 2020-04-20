@@ -24,8 +24,8 @@ build:
 deploy:
   stage: deploy
   before_script:
-    - apk add --no-cache curl python
-    - apk upgrade
+    - apt-get install --no-cache curl python
+    - apt-get upgrade
     - curl https://bootstrap.pypa.io/2.6/get-pip.py -o get-pip.py
     - python get-pip.py
     - pip install awscli --upgrade --user
