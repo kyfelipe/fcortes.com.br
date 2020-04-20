@@ -12,9 +12,10 @@ export const PostItemLink = styled(Link)`
 export const PostItemWrapper = styled.div`
   display: flex;
   position: relative;
-  flex-direction: column;
+  flex-direction: row;
   align-items: flex-start;
   justify-content: space-between;
+  width: 100%;
 `;
 
 export const PostItemProfile = styled.div`
@@ -43,12 +44,11 @@ export const PostItemProfileInfo = styled.div`
 
 export const PostItemImage = styled.div`
   width: 500px;
-  position: absolute;
-  right: 2%;
+  margin-right: 2%;
 `;
 
 export const Image = styled(Img)`
-  max-height: 800px;
+  max-height: 350px;
   background-position: 50% 50%;
   background-size: cover;
 `;
@@ -61,7 +61,6 @@ export const PostItemTitle = styled.h2`
   font-size: 3rem;
   font-weight: bold;
   margin: 1.5rem 0;
-  width: 82%;
 `;
 
 export const PostItemDate = styled.div`
@@ -73,5 +72,5 @@ export const PostItemProfileName = styled.div`
 `;
 
 export const PostItemDescription = styled.div`
-  width: 82%;
+  
 `;
