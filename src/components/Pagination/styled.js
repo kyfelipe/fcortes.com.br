@@ -9,6 +9,7 @@ export const PaginationWrapper = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  user-select: none;
 `;
 
 export const Pagination = styled(Link)`
