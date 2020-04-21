@@ -46,7 +46,7 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
-    "deploy": "aws s3 sync public/ s3://fcortes"
+    "deploy": "aws s3 sync public/ s3://fcortes --acl public-read"
   },
   "repository": {
     "type": "git",
