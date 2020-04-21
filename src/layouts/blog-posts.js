@@ -2,6 +2,7 @@ import React from 'react'
 import { graphql } from 'gatsby'
 
 import Layout from './page'
+import Comments from '../components/Comments'
 import SEO from '../components/seo'
 
 import * as S from '../components/Post/styled'
@@ -31,7 +32,7 @@ const BlogPost = ({ data }) => {
       </S.PostHeader>
       <S.PostImage fluid={post.frontmatter.featuredImage.childImageSharp.fluid}/>
       <S.MainContent dangerouslySetInnerHTML={{ __html: post.html }}/>
-      {/*<Comments url={post.fields.slug} title={post.frontmatter.title}/>*/}
+      <Comments url={post.fields.slug} title={post.frontmatter.title}/>
     </Layout>
   )
 }
