@@ -2,11 +2,14 @@ import styled from 'styled-components'
 import { Link } from 'gatsby'
 
 export const PaginationWrapper = styled.div`
+  position: absolute;
+  bottom: 5px;
   width: 100%;
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  user-select: none;
 `;
 
 export const Pagination = styled(Link)`

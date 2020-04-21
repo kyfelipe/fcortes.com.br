@@ -90,7 +90,9 @@ const GlobalStyles = createGlobalStyle`
     //--borders: #dedede;
     //--postColor: #111;
     --texts: #212121;
+    --mediumTexts: rgba(0, 0, 0, 0.54);
     --highlight: #1B68BF;
+    --link: #3D98FF; // #5E7DDB
     //--mediumBackground: #f0f0f3;
     --background: #FFFFFF;
     --white: #FFFFFF;

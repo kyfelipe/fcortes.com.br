@@ -61,6 +61,7 @@ export const PostItemTitle = styled.h2`
   font-size: 3rem;
   font-weight: bold;
   margin: 1.5rem 0;
+  width: 92%;
 `;
 
 export const PostItemDate = styled.div`
@@ -72,5 +73,5 @@ export const PostItemProfileName = styled.div`
 `;
 
 export const PostItemDescription = styled.div`
-  
+  width: 92%;
 `;
