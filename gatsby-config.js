@@ -50,6 +50,7 @@ module.exports = {
             }
           },
           `gatsby-remark-lazy-load`,
+          `gatsby-remark-images-zoom`,
           `gatsby-remark-prismjs`
         ]
       },
