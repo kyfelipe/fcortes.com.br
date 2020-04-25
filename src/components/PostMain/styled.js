@@ -44,7 +44,7 @@ export const PostItemProfileInfo = styled.div`
 
 export const PostItemImage = styled.div`
   width: 500px;
-  margin-right: 2%;
+  margin-right: 1%;
 `;
 
 export const Image = styled(Img)`
