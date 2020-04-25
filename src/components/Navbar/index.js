@@ -47,12 +47,12 @@ const Navbar = () => {
           </S.FeatureWrapper>
           <S.SocialWrapper>
             <S.Icon>
-              <a target="-_blank" href="https://github.com/kyfelipe">
+              <a target="-_blank" rel="noopener noreferrer" href="https://github.com/kyfelipe">
                 <Github />
               </a>
             </S.Icon>
             <S.Icon>
-              <a target="_blank" href="https://www.linkedin.com/in/felipe-cortes/">
+              <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/felipe-cortes/">
                 <LinkedinSquare />
               </a>
             </S.Icon>
