@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 
 import logoPath from '../../../static/assets/img/logo.svg'
 import { Moon, Sun } from 'styled-icons/boxicons-solid'
@@ -8,6 +8,9 @@ import { Github, LinkedinSquare } from 'styled-icons/boxicons-logos'
 import * as S from './styled'
 
 const Navbar = () => {
+  const [theme, setTheme] = useState(null);
+  const isLightMode = theme === 'light';
+
   const links = [
     {
       name: `Blog`,
@@ -18,6 +21,11 @@ const Navbar = () => {
       path: `/sobre-mim`
     }
   ];
+
+  useEffect(() => {
+    setTheme(window.__theme);
+    window.__onThemeChange = () => setTheme(window.__theme);
+  }, []);
 
   return (
     <S.NavbarWrapper>
@@ -41,17 +49,19 @@ const Navbar = () => {
             <S.Icon>
               <Search />
             </S.Icon>
-            <S.Icon>
-              <Moon />
+            <S.Icon title="Mudar tema" onClick={() => {
+              window.__setPreferredTheme(isLightMode ? 'dark' : 'light')
+            }}>
+              {isLightMode ? <Moon /> : <Sun />}
             </S.Icon>
           </S.FeatureWrapper>
           <S.SocialWrapper>
-            <S.Icon>
+            <S.Icon title="Github">
               <a target="-_blank" rel="noopener noreferrer" href="https://github.com/kyfelipe">
                 <Github />
               </a>
             </S.Icon>
-            <S.Icon>
+            <S.Icon title="LinkedIn">
               <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/felipe-cortes/">
                 <LinkedinSquare />
               </a>
