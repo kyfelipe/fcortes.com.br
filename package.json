@@ -2,7 +2,7 @@
   "name": "fcortes.com.br",
   "private": true,
   "description": "Meu blog sobre devops",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "author": "Felipe Côrtes <contatos.cortes@gmail.com>",
   "dependencies": {
     "gatsby": "^2.20.12",
@@ -18,7 +18,7 @@
     "gatsby-remark-images-zoom": "^1.1.0",
     "gatsby-remark-lazy-load": "^1.0.2",
     "gatsby-remark-prismjs": "^3.4.3",
-    "gatsby-remark-relative-images": "^0.2.3",
+    "gatsby-remark-relative-images": "^0.3.0",
     "gatsby-source-filesystem": "^2.2.2",
     "gatsby-transformer-remark": "^2.7.0",
     "gatsby-transformer-sharp": "^2.4.3",
@@ -45,8 +45,7 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
-    "deploy": "aws s3 sync public/ s3://fcortes --acl public-read"
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
   "repository": {
     "type": "git",
