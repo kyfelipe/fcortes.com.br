@@ -63,6 +63,7 @@ const BlogList = props => {
           if (index !== 0) {
             return (
               <PostItem
+                key={slug}
                 title={title}
                 description={description}
                 category={category}

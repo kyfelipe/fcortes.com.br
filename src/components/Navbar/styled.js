@@ -90,6 +90,12 @@ export const LogoName = styled.div`
               transform: translateX(51px);
     }
   }
+  
+  &.no-animate {
+    -webkit-animation: none;
+    animation: none;
+    transform: translateX(51px);
+  }
 `;
 
 export const FeatureWrapper = styled.div`

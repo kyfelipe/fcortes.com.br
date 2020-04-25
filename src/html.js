@@ -41,6 +41,8 @@ export default function HTML(props) {
               }
               
               setTheme(preferredTheme || 'light');
+              
+              sessionStorage.setItem('animate_logo', 'animate'); 
             })();
             `,
         }}

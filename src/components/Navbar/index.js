@@ -10,6 +10,10 @@ import * as S from './styled'
 const Navbar = () => {
   const [theme, setTheme] = useState(null);
   const isLightMode = theme === 'light';
+  const stateLogo = sessionStorage.getItem('animate_logo');
+  if (stateLogo) {
+    setTimeout(() => sessionStorage.setItem('animate_logo', 'no-animate'), 1000);
+  }
 
   const links = [
     {
@@ -34,7 +38,7 @@ const Navbar = () => {
           <S.LogoLink>
             <S.Logo src={logoPath} />
           </S.LogoLink>
-          <S.LogoName>
+          <S.LogoName className={stateLogo}>
             Felipe<br/>
             Côrtes
           </S.LogoName>
