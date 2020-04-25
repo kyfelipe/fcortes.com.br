@@ -1,6 +1,9 @@
 import React from 'react'
 
 import logoPath from '../../../static/assets/img/logo.svg'
+import { Moon, Sun } from 'styled-icons/boxicons-solid'
+import { Search } from 'styled-icons/boxicons-regular'
+import { Github, LinkedinSquare } from 'styled-icons/boxicons-logos'
 
 import * as S from './styled'
 
@@ -34,6 +37,26 @@ const Navbar = () => {
               {link.name}
             </S.NavbarLink>
           ))}
+          <S.FeatureWrapper>
+            <S.Icon>
+              <Search />
+            </S.Icon>
+            <S.Icon>
+              <Moon />
+            </S.Icon>
+          </S.FeatureWrapper>
+          <S.SocialWrapper>
+            <S.Icon>
+              <a target="-_blank" href="https://github.com/kyfelipe">
+                <Github />
+              </a>
+            </S.Icon>
+            <S.Icon>
+              <a target="_blank" href="https://www.linkedin.com/in/felipe-cortes/">
+                <LinkedinSquare />
+              </a>
+            </S.Icon>
+          </S.SocialWrapper>
         </S.LinkWrapper>
       </S.NavbarContent>
     </S.NavbarWrapper>
