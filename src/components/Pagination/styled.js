@@ -22,4 +22,5 @@ export const Pagination = styled(Link)`
 export const PageNumbers = styled.p`
   font-size: 1.5rem;
   margin: .3rem .75rem 0;
+  color: var(--texts);
 `;

@@ -90,4 +90,43 @@ export const LogoName = styled.div`
               transform: translateX(51px);
     }
   }
+  
+  &.no-animate {
+    -webkit-animation: none;
+    animation: none;
+    transform: translateX(51px);
+  }
+`;
+
+export const FeatureWrapper = styled.div`
+  border-left: 1px solid var(--texts);
+  display: flex;
+  flex-direction: row;
+  margin-left: .15rem;
+`;
+
+export const SocialWrapper = styled.div`
+  border-left: 1px solid var(--texts);
+  display: flex;
+  flex-direction: row;
+  margin-left: .5rem;
+`;
+
+export const Icon = styled.div`
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-left: .5rem;
+  text-decoration: none;
+  color: var(--texts);
+  cursor: pointer;
+  
+  a:visited {
+    text-decoration: inherit;
+    color: inherit;
+  }
+  
+  a:link {
+    text-decoration: inherit;
+    color: inherit;
+  }
 `;
