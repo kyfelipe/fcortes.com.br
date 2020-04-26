@@ -50,12 +50,13 @@ export const PostInfoAuthor = styled.p`
   color: var(--texts);
   font-size: 1rem;
   line-height: 1.5rem;
-  font-weight: 500;
+  font-weight: 600;
 `;
 
 export const PostInfoDate = styled.p`
   font-size: 1rem;
   font-weight: 300;
+  color: var(--texts);
 `;
 
 export const PostImage = styled(Img)`
