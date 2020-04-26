@@ -116,6 +116,7 @@ export const MainContent = styled.div`
   }
   
   figcaption {
+    color: var(--texts);
     text-align: center;
     margin-top: .5rem;
     font-weight: 300;

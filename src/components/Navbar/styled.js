@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import { Link } from 'gatsby'
 
 export const NavbarWrapper = styled.div`
-  box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 12px 0 var(--navbarShadow);
 `;
 
 export const NavbarContent = styled.div`
@@ -44,7 +44,7 @@ export const LogoWrapper = styled(Link)`
 export const LogoLink = styled.div`
   z-index: 2;
   background-color: var(--background);
-  padding-right: 11px;
+  padding-right: 14px;
 `;
 
 export const Logo = styled.img`
@@ -53,13 +53,13 @@ export const Logo = styled.img`
   width: auto;
 `;
 
-
 export const LogoName = styled.div`
   position: absolute;
-  line-height: 1.1;
+  line-height: 17px;
   z-index: 1;
-  font-family: 'Raleway', sans-serif;
-  font-weight: bold;
+  font-family: 'Spartan', sans-serif;
+  font-weight: 500;
+  letter-spacing: 1px;
   font-size: 1.05rem;
   color: var(--texts);
   user-select: none;
@@ -74,8 +74,8 @@ export const LogoName = styled.div`
     }
     
     100% {
-      -webkit-transform: translateX(51px);
-              transform: translateX(51px);
+      -webkit-transform: translateX(53px);
+              transform: translateX(53px);
     }
   }
   
@@ -86,15 +86,15 @@ export const LogoName = styled.div`
     }
     
     100% {
-      -webkit-transform: translateX(51px);
-              transform: translateX(51px);
+      -webkit-transform: translateX(53px);
+              transform: translateX(53px);
     }
   }
   
   &.no-animate {
     -webkit-animation: none;
     animation: none;
-    transform: translateX(51px);
+    transform: translateX(53px);
   }
 `;
 

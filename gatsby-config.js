@@ -27,6 +27,7 @@ module.exports = {
       options: {
         fonts: [
           `Raleway`,
+          `Spartan`
         ],
         display: 'swap'
       }
