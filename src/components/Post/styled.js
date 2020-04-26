@@ -59,12 +59,12 @@ export const PostInfoDate = styled.p`
   color: var(--texts);
 `;
 
-export const PostImage = styled(Img)`
-  max-height: 24rem;
-  background-position: 50% 50%;
-  background-size: cover;
-  margin-bottom: 1.5rem;
-`;
+// export const PostImage = styled(Img)`
+//   max-height: 24rem;
+//   background-position: 50% 50%;
+//   background-size: cover;
+//   margin-bottom: 1.5rem;
+// `;
 
 export const MainContent = styled.div`
   margin: auto;

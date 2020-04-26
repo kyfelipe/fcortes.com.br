@@ -30,7 +30,7 @@ const BlogPost = ({ data }) => {
           </S.PostInfo>
         </S.PostInfoWrapper>
       </S.PostHeader>
-      <S.PostImage fluid={post.frontmatter.featuredImage.childImageSharp.fluid}/>
+      {/*<S.PostImage fluid={post.frontmatter.featuredImage.childImageSharp.fluid}/>*/}
       <S.MainContent dangerouslySetInnerHTML={{ __html: post.html }}/>
       <Comments url={post.fields.slug} title={post.frontmatter.title}/>
     </Layout>
