@@ -44,7 +44,34 @@ export const LogoWrapper = styled(Link)`
 export const LogoLink = styled.div`
   z-index: 2;
   background-color: var(--background);
-  padding-right: 14px;
+  -webkit-animation: padding-right 500ms cubic-bezier(0.250, 0.460, 0.450, 0.940) 300ms both;
+  animation: padding-right 500ms cubic-bezier(0.250, 0.460, 0.450, 0.940) 300ms both;
+  
+  @-webkit-keyframes padding-right {
+    0% {
+      padding-right: 23px;
+    }
+    
+    100% {
+      padding-right: 14px;
+    }
+  }
+  
+  @keyframes padding-right {
+    0% {
+      padding-right: 23px;
+    }
+    
+    100% {
+      padding-right: 14px;
+    }
+  }
+  
+  &.no-animate {
+    -webkit-animation: none;
+    animation: none;
+    padding-right: 14px;
+  }
 `;
 
 export const Logo = styled.img`
@@ -55,6 +82,7 @@ export const Logo = styled.img`
 
 export const LogoName = styled.div`
   position: absolute;
+  top: 6px;
   line-height: 17px;
   z-index: 1;
   font-family: 'Spartan', sans-serif;
