@@ -35,7 +35,7 @@ const Navbar = () => {
     <S.NavbarWrapper>
       <S.NavbarContent>
         <S.LogoWrapper to="/">
-          <S.LogoLink>
+          <S.LogoLink className={stateLogo}>
             <S.Logo src={logoPath} />
           </S.LogoLink>
           <S.LogoName className={stateLogo}>

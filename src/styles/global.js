@@ -83,6 +83,7 @@ const GlobalStyles = createGlobalStyle`
     --background: #121212;
     --white: #FFFFFF;
     --black: #212121;
+    --navbarShadow: rgba(0, 0, 0, 1);
   }
 
   body.light {
@@ -93,6 +94,7 @@ const GlobalStyles = createGlobalStyle`
     --background: #FFFFFF;
     --white: #FFFFFF;
     --black: #212121;
+    --navbarShadow: rgba(0, 0, 0, 0.05);
   }
 `;
 
