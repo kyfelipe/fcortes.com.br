@@ -1,8 +1,9 @@
 import styled from 'styled-components'
-import { Link } from 'gatsby'
+import AniLink from 'gatsby-plugin-transition-link/AniLink'
 
 export const NavbarWrapper = styled.div`
   box-shadow: 0 4px 12px 0 var(--navbarShadow);
+  width: 100vw;
 `;
 
 export const NavbarContent = styled.div`
@@ -23,7 +24,7 @@ export const LinkWrapper = styled.div`
   align-items: center;
 `;
 
-export const NavbarLink = styled(Link)`
+export const NavbarLink = styled(AniLink)`
   margin: 0 .5rem;
   text-decoration: none;
   color: var(--texts);
@@ -34,7 +35,7 @@ export const NavbarLink = styled(Link)`
   }
 `;
 
-export const LogoWrapper = styled(Link)`
+export const LogoWrapper = styled(AniLink)`
   display: flex;
   position: relative;
   flex-direction: row;
