@@ -6,6 +6,7 @@ module.exports = {
     siteUrl: 'https://fcortes.com.br'
   },
   plugins: [
+    `gatsby-plugin-transition-link`,
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-react-helmet`,
     {
@@ -50,8 +51,13 @@ module.exports = {
               showCaptions: true
             }
           },
+          {
+            resolve: `gatsby-remark-images-zoom`,
+            options: {
+              zIndex: 9999,
+            }
+          },
           `gatsby-remark-lazy-load`,
-          `gatsby-remark-images-zoom`,
           `gatsby-remark-prismjs`
         ]
       },
