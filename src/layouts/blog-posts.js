@@ -15,7 +15,7 @@ const BlogPost = ({ data }) => {
       <SEO
         title={post.frontmatter.title}
         description={post.frontmatter.description}
-        keywords={[`gatsby`, `application`, `react`]}
+        keywords={post.frontmatter.category.split(',')}
       />
       <S.PostHeader>
         <S.PostTitle>{post.frontmatter.title}</S.PostTitle>
