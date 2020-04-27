@@ -24,7 +24,7 @@ const BlogList = props => {
       <SEO
         title={`Blog`}
         description={``}
-        keywords={[`gatsby`, `application`, `react`]}
+        keywords={[`blog`, `devops`, `tecnologias`, `kubernetes`, `AWS`]}
       />
       <S.PostMainWrapper>
         <PostMain

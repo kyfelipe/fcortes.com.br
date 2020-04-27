@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Felipe Côrtes`,
-    description: ``,
+    description: `Um blog sobre a cultura e tecnologias do mundo devops`,
     author: `@kyfelipe`,
     siteUrl: 'https://fcortes.com.br'
   },
@@ -69,7 +69,7 @@ module.exports = {
       options: {
         name: `Felipe Côrtes Blog`,
         short_name: `FCôrtes`,
-        description: ``,
+        description: `Um blog sobre a cultura e tecnologias do mundo devops`,
         lang: `pt`,
         start_url: `/`,
         background_color: `#ffffff`,
