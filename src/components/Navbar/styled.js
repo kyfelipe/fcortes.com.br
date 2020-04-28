@@ -1,8 +1,9 @@
 import styled from 'styled-components'
-import { Link } from 'gatsby'
+import AniLink from 'gatsby-plugin-transition-link/AniLink'
 
 export const NavbarWrapper = styled.div`
-  box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 12px 0 var(--navbarShadow);
+  width: 100vw;
 `;
 
 export const NavbarContent = styled.div`
@@ -23,7 +24,7 @@ export const LinkWrapper = styled.div`
   align-items: center;
 `;
 
-export const NavbarLink = styled(Link)`
+export const NavbarLink = styled(AniLink)`
   margin: 0 .5rem;
   text-decoration: none;
   color: var(--texts);
@@ -34,7 +35,7 @@ export const NavbarLink = styled(Link)`
   }
 `;
 
-export const LogoWrapper = styled(Link)`
+export const LogoWrapper = styled(AniLink)`
   display: flex;
   position: relative;
   flex-direction: row;
@@ -44,7 +45,34 @@ export const LogoWrapper = styled(Link)`
 export const LogoLink = styled.div`
   z-index: 2;
   background-color: var(--background);
-  padding-right: 11px;
+  -webkit-animation: padding-right 500ms cubic-bezier(0.250, 0.460, 0.450, 0.940) 300ms both;
+  animation: padding-right 500ms cubic-bezier(0.250, 0.460, 0.450, 0.940) 300ms both;
+  
+  @-webkit-keyframes padding-right {
+    0% {
+      padding-right: 23px;
+    }
+    
+    100% {
+      padding-right: 14px;
+    }
+  }
+  
+  @keyframes padding-right {
+    0% {
+      padding-right: 23px;
+    }
+    
+    100% {
+      padding-right: 14px;
+    }
+  }
+  
+  &.no-animate {
+    -webkit-animation: none;
+    animation: none;
+    padding-right: 14px;
+  }
 `;
 
 export const Logo = styled.img`
@@ -53,13 +81,14 @@ export const Logo = styled.img`
   width: auto;
 `;
 
-
 export const LogoName = styled.div`
   position: absolute;
-  line-height: 1.1;
+  top: 6px;
+  line-height: 17px;
   z-index: 1;
-  font-family: 'Raleway', sans-serif;
-  font-weight: bold;
+  font-family: 'Spartan', sans-serif;
+  font-weight: 500;
+  letter-spacing: 1px;
   font-size: 1.05rem;
   color: var(--texts);
   user-select: none;
@@ -74,8 +103,8 @@ export const LogoName = styled.div`
     }
     
     100% {
-      -webkit-transform: translateX(51px);
-              transform: translateX(51px);
+      -webkit-transform: translateX(53px);
+              transform: translateX(53px);
     }
   }
   
@@ -86,15 +115,15 @@ export const LogoName = styled.div`
     }
     
     100% {
-      -webkit-transform: translateX(51px);
-              transform: translateX(51px);
+      -webkit-transform: translateX(53px);
+              transform: translateX(53px);
     }
   }
   
   &.no-animate {
     -webkit-animation: none;
     animation: none;
-    transform: translateX(51px);
+    transform: translateX(53px);
   }
 `;
 

@@ -1,8 +1,8 @@
 import styled from 'styled-components'
 import Img from 'gatsby-image'
-import { Link } from 'gatsby'
+import AniLink from 'gatsby-plugin-transition-link/AniLink'
 
-export const PostItemLink = styled(Link)`
+export const PostItemLink = styled(AniLink)`
   text-decoration: none;
   width: 100%;
   height: 50vh;
@@ -43,18 +43,22 @@ export const PostItemProfileInfo = styled.div`
 `;
 
 export const PostItemImage = styled.div`
-  width: 500px;
-  margin-right: 1%;
+  margin-right: 14px;
+  width: 455px;
+  height: 350px;
 `;
 
 export const Image = styled(Img)`
-  max-height: 350px;
+  width: 100%;
+  height: 100%;
   background-position: 50% 50%;
   background-size: cover;
 `;
 
 export const PostItemInfo = styled.div`
-  
+  width: 50%;
+  height: 100%;
+  margin-left: 14px;
 `;
 
 export const PostItemTitle = styled.h2`

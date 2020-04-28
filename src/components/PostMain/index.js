@@ -1,6 +1,8 @@
 import React from 'react'
-import { graphql, useStaticQuery } from "gatsby"
+import { graphql, useStaticQuery } from 'gatsby'
 import PropTypes from 'prop-types'
+
+import getThemeColor from '../../utils/getThemeColor'
 
 import * as S from './styled'
 
@@ -18,7 +20,13 @@ const PostMain = ({ category, title, description, author, date, timeToRead, slug
   `);
 
   return (
-    <S.PostItemLink to={slug}>
+    <S.PostItemLink
+      cover
+      direction="top"
+      bg={getThemeColor()}
+      duration={0.6}
+      to={slug}
+    >
       <S.PostItemWrapper>
         <S.PostItemInfo>
           <S.PostItemProfile>

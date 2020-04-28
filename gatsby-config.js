@@ -1,11 +1,12 @@
 module.exports = {
   siteMetadata: {
     title: `Felipe Côrtes`,
-    description: ``,
+    description: `Um blog sobre a cultura e tecnologias do mundo devops`,
     author: `@kyfelipe`,
     siteUrl: 'https://fcortes.com.br'
   },
   plugins: [
+    `gatsby-plugin-transition-link`,
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-react-helmet`,
     {
@@ -27,6 +28,7 @@ module.exports = {
       options: {
         fonts: [
           `Raleway`,
+          `Spartan`
         ],
         display: 'swap'
       }
@@ -49,8 +51,13 @@ module.exports = {
               showCaptions: true
             }
           },
+          {
+            resolve: `gatsby-remark-images-zoom`,
+            options: {
+              zIndex: 9999,
+            }
+          },
           `gatsby-remark-lazy-load`,
-          `gatsby-remark-images-zoom`,
           `gatsby-remark-prismjs`
         ]
       },
@@ -62,7 +69,7 @@ module.exports = {
       options: {
         name: `Felipe Côrtes Blog`,
         short_name: `FCôrtes`,
-        description: ``,
+        description: `Um blog sobre a cultura e tecnologias do mundo devops`,
         lang: `pt`,
         start_url: `/`,
         background_color: `#ffffff`,

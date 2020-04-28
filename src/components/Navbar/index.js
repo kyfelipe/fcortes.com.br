@@ -1,19 +1,17 @@
 import React, { useState, useEffect } from 'react'
-
-import logoPath from '../../../static/assets/img/logo.svg'
 import { Moon, Sun } from 'styled-icons/boxicons-solid'
 import { Search } from 'styled-icons/boxicons-regular'
 import { Github, LinkedinSquare } from 'styled-icons/boxicons-logos'
+
+import logoPath from '../../../static/assets/img/logo.svg'
+import logoWhitePath from '../../../static/assets/img/logo-white.svg'
+import getThemeColor from '../../utils/getThemeColor'
 
 import * as S from './styled'
 
 const Navbar = () => {
   const [theme, setTheme] = useState(null);
   const isLightMode = theme === 'light';
-  const stateLogo = sessionStorage.getItem('animate_logo');
-  if (stateLogo) {
-    setTimeout(() => sessionStorage.setItem('animate_logo', 'no-animate'), 1000);
-  }
 
   const links = [
     {
@@ -34,18 +32,32 @@ const Navbar = () => {
   return (
     <S.NavbarWrapper>
       <S.NavbarContent>
-        <S.LogoWrapper to="/">
-          <S.LogoLink>
-            <S.Logo src={logoPath} />
+        <S.LogoWrapper
+          cover
+          direction="bottom"
+          bg={getThemeColor()}
+          duration={0.6}
+          to="/"
+        >
+          <S.LogoLink className={'no-animate'}>
+            <S.Logo src={isLightMode ? logoPath : logoWhitePath} />
           </S.LogoLink>
-          <S.LogoName className={stateLogo}>
+          <S.LogoName className={'no-animate'}>
             Felipe<br/>
             Côrtes
           </S.LogoName>
         </S.LogoWrapper>
         <S.LinkWrapper>
           {links.map((link, i) => (
-            <S.NavbarLink key={i} to={link.path} activeClassName="active">
+            <S.NavbarLink
+              cover
+              direction="top"
+              bg={getThemeColor()}
+              duration={0.6}
+              key={i}
+              to={link.path}
+              activeClassName="active"
+            >
               {link.name}
             </S.NavbarLink>
           ))}
