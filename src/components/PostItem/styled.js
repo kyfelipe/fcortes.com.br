@@ -31,6 +31,7 @@ export const PostItemInfo = styled.div`
 `;
 
 export const PostItemTitle = styled.h2`
+  font-family: 'Merriweather', sans-serif;
   font-size: 1.5rem;
   font-weight: bold;
   margin-top: .5rem;

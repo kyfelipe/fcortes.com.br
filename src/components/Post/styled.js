@@ -12,6 +12,7 @@ export const PostHeader = styled.div`
 `;
 
 export const PostTitle = styled.h1`
+  font-family: 'Merriweather', sans-serif;
   color: var(--texts);
   font-size: 2.5rem;
   font-weight: 700;

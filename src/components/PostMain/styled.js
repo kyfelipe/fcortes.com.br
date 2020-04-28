@@ -62,9 +62,10 @@ export const PostItemInfo = styled.div`
 `;
 
 export const PostItemTitle = styled.h2`
+  font-family: 'Merriweather', sans-serif;
   font-size: 3rem;
   font-weight: bold;
-  margin: 1.5rem 0;
+  margin: 1.5rem 0 1rem;
   width: 92%;
 `;
 
