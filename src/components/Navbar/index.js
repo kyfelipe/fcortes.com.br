@@ -12,10 +12,6 @@ import * as S from './styled'
 const Navbar = () => {
   const [theme, setTheme] = useState(null);
   const isLightMode = theme === 'light';
-  const stateLogo = sessionStorage.getItem('animate_logo');
-  if (stateLogo) {
-    setTimeout(() => sessionStorage.setItem('animate_logo', 'no-animate'), 1000);
-  }
 
   const links = [
     {
@@ -43,10 +39,10 @@ const Navbar = () => {
           duration={0.6}
           to="/"
         >
-          <S.LogoLink className={stateLogo}>
+          <S.LogoLink className={'no-animate'}>
             <S.Logo src={isLightMode ? logoPath : logoWhitePath} />
           </S.LogoLink>
-          <S.LogoName className={stateLogo}>
+          <S.LogoName className={'no-animate'}>
             Felipe<br/>
             Côrtes
           </S.LogoName>
