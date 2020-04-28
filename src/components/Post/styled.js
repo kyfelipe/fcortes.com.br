@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import Img from 'gatsby-image'
 
 export const PostWrapper = styled.div`
   position: relative;
@@ -25,53 +24,6 @@ export const PostDescription = styled.h2`
   font-weight: 200;
   margin-bottom: 1.25rem;
 `;
-
-export const PostInfoWrapper = styled.div`
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-`;
-
-export const PostInfoImageWrapper = styled.div`
-  display: flex;
-  align-items: center;
-  border-radius: 50%;
-  border: 2px solid var(--highlight);
-  padding: 2px;
-`;
-
-export const PostInfoImage = styled(Img)`
-  border-radius: 50%;
-`;
-
-export const PostInfo = styled.div`
-  display: flex;
-  justify-content: flex-start;
-  flex-direction: column;
-  margin-left: 1rem;
-  margin-top: -.25rem;
-`;
-
-export const PostInfoAuthor = styled.p`
-  color: var(--texts);
-  font-size: 1rem;
-  line-height: 1.5rem;
-  font-weight: 600;
-`;
-
-export const PostInfoDate = styled.p`
-  font-size: 1rem;
-  font-weight: 300;
-  color: var(--texts);
-`;
-
-// export const PostImage = styled(Img)`
-//   max-height: 24rem;
-//   background-position: 50% 50%;
-//   background-size: cover;
-//   margin-bottom: 1.5rem;
-// `;
 
 export const MainContent = styled.div`
   margin: auto;
