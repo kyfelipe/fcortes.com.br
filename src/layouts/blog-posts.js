@@ -17,21 +17,23 @@ const BlogPost = ({ data }) => {
         description={post.frontmatter.description}
         keywords={post.frontmatter.category.split(',')}
       />
-      <S.PostHeader>
-        <S.PostTitle>{post.frontmatter.title}</S.PostTitle>
-        <S.PostDescription>{post.frontmatter.description}</S.PostDescription>
-        <S.PostInfoWrapper>
-          <S.PostInfoImageWrapper>
-            <S.PostInfoImage fixed={data.authorImage.childImageSharp.fixed}/>
-          </S.PostInfoImageWrapper>
-          <S.PostInfo>
-            <S.PostInfoAuthor>{post.frontmatter.author}</S.PostInfoAuthor>
-            <S.PostInfoDate>{post.frontmatter.date} &middot; {post.timeToRead} min de leitura</S.PostInfoDate>
-          </S.PostInfo>
-        </S.PostInfoWrapper>
-      </S.PostHeader>
-      {/*<S.PostImage fluid={post.frontmatter.featuredImage.childImageSharp.fluid}/>*/}
-      <S.MainContent dangerouslySetInnerHTML={{ __html: post.html }}/>
+      <S.PostWrapper>
+        <S.PostHeader>
+          <S.PostTitle>{post.frontmatter.title}</S.PostTitle>
+          <S.PostDescription>{post.frontmatter.description}</S.PostDescription>
+          <S.PostInfoWrapper>
+            <S.PostInfoImageWrapper>
+              <S.PostInfoImage fixed={data.authorImage.childImageSharp.fixed}/>
+            </S.PostInfoImageWrapper>
+            <S.PostInfo>
+              <S.PostInfoAuthor>{post.frontmatter.author}</S.PostInfoAuthor>
+              <S.PostInfoDate>{post.frontmatter.date} &middot; {post.timeToRead} min de leitura</S.PostInfoDate>
+            </S.PostInfo>
+          </S.PostInfoWrapper>
+        </S.PostHeader>
+        {/*<S.PostImage fluid={post.frontmatter.featuredImage.childImageSharp.fluid}/>*/}
+        <S.MainContent dangerouslySetInnerHTML={{ __html: post.html }}/>
+      </S.PostWrapper>
       <Comments url={post.fields.slug} title={post.frontmatter.title}/>
     </Layout>
   )

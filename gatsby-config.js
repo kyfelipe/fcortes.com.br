@@ -55,6 +55,7 @@ module.exports = {
             resolve: `gatsby-remark-images-zoom`,
             options: {
               zIndex: 9999,
+              background: `var(--background)`
             }
           },
           `gatsby-remark-lazy-load`,
@@ -73,7 +74,7 @@ module.exports = {
         lang: `pt`,
         start_url: `/`,
         background_color: `#ffffff`,
-        theme_color: `#1B68BF`,
+        theme_color: `#121212`,
         display: `minimal-ui`,
         icon: `${__dirname}/static/assets/img/logo-icon.png`,
       },

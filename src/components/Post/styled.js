@@ -1,6 +1,12 @@
 import styled from 'styled-components'
 import Img from 'gatsby-image'
 
+export const PostWrapper = styled.div`
+  position: relative;
+  width: 730px;
+  margin: 0 auto 0;
+`;
+
 export const PostHeader = styled.div`
   margin: 3rem 0 1.75rem;
 `;
