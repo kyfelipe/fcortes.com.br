@@ -6,7 +6,7 @@ import * as S from './styled'
 const Profile = ({ authorImage, author, date, timeToRead}) => (
   <S.ProfileWrapper>
     <S.ProfileImageWrapper>
-      <S.ProfileImage fixed={authorImage}/>
+      <S.ProfileImage title="Felipe Côrtes" fixed={authorImage}/>
     </S.ProfileImageWrapper>
     <S.Profile>
       <S.Author>{author}</S.Author>
