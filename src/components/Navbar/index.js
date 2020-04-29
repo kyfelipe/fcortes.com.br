@@ -40,7 +40,7 @@ const Navbar = () => {
           to="/"
         >
           <S.LogoLink className={'no-animate'}>
-            <S.Logo src={isLightMode ? logoPath : logoWhitePath} />
+            <S.Logo title="" src={isLightMode ? logoPath : logoWhitePath} />
           </S.LogoLink>
           <S.LogoName className={'no-animate'}>
             Felipe<br/>
