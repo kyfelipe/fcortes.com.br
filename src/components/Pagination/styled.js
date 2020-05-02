@@ -2,8 +2,6 @@ import styled from 'styled-components'
 import { Link } from 'gatsby'
 
 export const PaginationWrapper = styled.div`
-  position: absolute;
-  bottom: 5px;
   width: 100%;
   display: flex;
   flex-direction: row;
