@@ -58,7 +58,7 @@ const Navbar = () => {
           </S.FeatureWrapper>
           <S.SocialWrapper>
             <S.Icon title="Github">
-              <a target="-_blank" rel="noopener noreferrer" href="https://github.com/kyfelipe">
+              <a target="_blank" rel="noopener noreferrer" href="https://github.com/kyfelipe">
                 <Github />
               </a>
             </S.Icon>

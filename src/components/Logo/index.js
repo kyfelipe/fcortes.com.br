@@ -1,4 +1,5 @@
-import React from "react"
+import React from 'react'
+import PropTypes from 'prop-types'
 
 import logoPath from '../../../static/assets/img/logo.svg'
 import logoWhitePath from '../../../static/assets/img/logo-white.svg'
@@ -24,6 +25,10 @@ const Logo = ({ isLightMode }) => {
       </S.LogoName>
     </S.LogoWrapper>
   );
+};
+
+Logo.propTypes = {
+  isLightMode: PropTypes.bool.isRequired,
 };
 
 export default Logo;

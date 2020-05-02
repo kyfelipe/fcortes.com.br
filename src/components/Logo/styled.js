@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import media from 'styled-media-query'
 import AniLink from 'gatsby-plugin-transition-link/AniLink'
 
 export const LogoWrapper = styled(AniLink)`
@@ -9,6 +10,8 @@ export const LogoWrapper = styled(AniLink)`
 `;
 
 export const LogoLink = styled.div`
+  --initial-padding: 14px;
+  --final-padding: 14px;
   z-index: 2;
   background-color: var(--background);
   -webkit-animation: padding-right 500ms cubic-bezier(0.250, 0.460, 0.450, 0.940) 300ms both;
@@ -16,35 +19,44 @@ export const LogoLink = styled.div`
   
   @-webkit-keyframes padding-right {
     0% {
-      padding-right: 23px;
+      padding-right: var(--initial-padding);
     }
     
     100% {
-      padding-right: 14px;
+      padding-right: var(--final-padding);
     }
   }
   
   @keyframes padding-right {
     0% {
-      padding-right: 23px;
+      padding-right: var(--initial-padding);
     }
     
     100% {
-      padding-right: 14px;
+      padding-right: var(--final-padding);
     }
   }
   
   &.no-animate {
     -webkit-animation: none;
     animation: none;
-    padding-right: 14px;
+    padding-right: var(--final-padding);
   }
+  
+  ${media.lessThan("large")`
+    height: 2rem;
+    padding-right: 10px!important;
+  `}
 `;
 
 export const Logo = styled.img`
   height: 2.5rem;
   margin: auto;
   width: auto;
+  
+  ${media.lessThan("large")`
+    height: 2rem;
+  `}
 `;
 
 export const LogoName = styled.div`
@@ -91,4 +103,10 @@ export const LogoName = styled.div`
     animation: none;
     transform: translateX(53px);
   }
+  
+  ${media.lessThan("large")`
+    font-size: .95rem;
+    top: 1px;
+    transform: translateX(43px)!important;
+  `}
 `;
