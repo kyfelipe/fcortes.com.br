@@ -5,7 +5,7 @@ export const PaginationWrapper = styled.div`
   position: absolute;
   bottom: 5px;
   width: 100%;
-  display: flex;
+  display: none;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;

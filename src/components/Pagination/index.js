@@ -9,7 +9,7 @@ const Pagination = ({ isFirst, isLast, currentPage, numPages, prevPage, nextPage
         {!isFirst && '←'}
       </S.Pagination>
       <S.PageNumbers>{currentPage} de {numPages}</S.PageNumbers>
-      <S.Pagination to={nextPage}>
+      <S.Pagination id="next" to={nextPage}>
         {!isLast && '→'}
       </S.Pagination>
     </S.PaginationWrapper>
