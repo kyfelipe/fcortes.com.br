@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import media from 'styled-media-query'
 import Img from 'gatsby-image'
 import AniLink from 'gatsby-plugin-transition-link/AniLink'
 
@@ -7,6 +8,10 @@ export const PostItemLink = styled(AniLink)`
   width: 100%;
   height: 50vh;
   color: var(--texts);
+  
+  ${media.lessThan("large")`
+    height: auto;
+  `}
 `;
 
 export const PostItemWrapper = styled.div`
@@ -16,36 +21,21 @@ export const PostItemWrapper = styled.div`
   align-items: flex-start;
   justify-content: space-between;
   width: 100%;
-`;
-
-export const PostItemProfile = styled.div`
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-`;
-
-export const PostItemProfilePhotoWrapper = styled.div`
-  display: flex;
-  align-items: center;
-  border-radius: 50%;
-  border: 2px solid #1B68BF;
-  padding: 2px;
-`;
-
-export const PostItemProfilePhoto = styled(Img)`
-  border-radius: 50%;
-`;
-
-export const PostItemProfileInfo = styled.div`
-  display: flex;
-  flex-direction: column;
-  margin-left: .75rem;
+  
+  ${media.lessThan("large")`
+    flex-direction: column;
+  `}
 `;
 
 export const PostItemImage = styled.div`
-  margin-right: 14px;
+  margin-right: 17px;
   width: 455px;
   height: 350px;
+  
+  ${media.lessThan("large")`
+    width: 100%;
+    height: 200px;
+  `}
 `;
 
 export const Image = styled(Img)`
@@ -58,24 +48,32 @@ export const Image = styled(Img)`
 export const PostItemInfo = styled.div`
   width: 50%;
   height: 100%;
-  margin-left: 14px;
+  margin-left: 9px;
+  
+  ${media.lessThan("large")`
+    width: 100%;
+    margin-left: 0;
+  `}
 `;
 
 export const PostItemTitle = styled.h2`
-  font-size: 3rem;
+  font-family: 'Merriweather', sans-serif;
+  font-size: 2.75rem;
   font-weight: bold;
-  margin: 1.5rem 0;
+  margin: 1.5rem 0 1rem;
   width: 92%;
-`;
-
-export const PostItemDate = styled.div`
-  font-size: .95rem;
-`;
-
-export const PostItemProfileName = styled.div`
-  font-weight: 700;
+  
+  ${media.lessThan("large")`
+    font-weight: normal;
+    font-size: 1.75rem;
+    margin-top: 1rem;
+  `}
 `;
 
 export const PostItemDescription = styled.div`
   width: 92%;
+  
+  ${media.lessThan("large")`
+    display: none;
+  `}
 `;

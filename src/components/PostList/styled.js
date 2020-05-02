@@ -1,13 +1,17 @@
 import styled from 'styled-components'
+import media from 'styled-media-query'
 
 export const ListWrapper = styled.div`
   display: flex;
   flex-direction: row;
-  justify-content: center;
-  margin-bottom: 3rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
 `;
 
 export const PostMainWrapper = styled.div`
-  height: 28rem;
-  padding-top: 3rem;
+  margin: 3rem 0;
+  
+  ${media.lessThan("large")`
+    margin-top: 1.5rem;
+  `}
 `;

@@ -1,15 +1,30 @@
 import styled from 'styled-components'
-import Img from 'gatsby-image'
+import media from 'styled-media-query'
+
+export const PostWrapper = styled.div`
+  position: relative;
+  width: 730px;
+  margin: 0 auto 0;
+  
+  ${media.lessThan("large")`
+    width: 100%;
+  `}
+`;
 
 export const PostHeader = styled.div`
   margin: 3rem 0 1.75rem;
 `;
 
 export const PostTitle = styled.h1`
+  font-family: 'Merriweather', sans-serif;
   color: var(--texts);
   font-size: 2.5rem;
   font-weight: 700;
   margin-bottom: 1rem;
+  
+  ${media.lessThan("large")`
+    font-size: 2rem;
+  `}
 `;
 
 export const PostDescription = styled.h2`
@@ -17,54 +32,11 @@ export const PostDescription = styled.h2`
   font-size: 1.5rem;
   font-weight: 200;
   margin-bottom: 1.25rem;
+  
+  ${media.lessThan("large")`
+    font-size: 1.25rem;
+  `}
 `;
-
-export const PostInfoWrapper = styled.div`
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-`;
-
-export const PostInfoImageWrapper = styled.div`
-  display: flex;
-  align-items: center;
-  border-radius: 50%;
-  border: 2px solid var(--highlight);
-  padding: 2px;
-`;
-
-export const PostInfoImage = styled(Img)`
-  border-radius: 50%;
-`;
-
-export const PostInfo = styled.div`
-  display: flex;
-  justify-content: flex-start;
-  flex-direction: column;
-  margin-left: 1rem;
-  margin-top: -.25rem;
-`;
-
-export const PostInfoAuthor = styled.p`
-  color: var(--texts);
-  font-size: 1rem;
-  line-height: 1.5rem;
-  font-weight: 600;
-`;
-
-export const PostInfoDate = styled.p`
-  font-size: 1rem;
-  font-weight: 300;
-  color: var(--texts);
-`;
-
-// export const PostImage = styled(Img)`
-//   max-height: 24rem;
-//   background-position: 50% 50%;
-//   background-size: cover;
-//   margin-bottom: 1.5rem;
-// `;
 
 export const MainContent = styled.div`
   margin: auto;

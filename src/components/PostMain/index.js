@@ -5,6 +5,7 @@ import PropTypes from 'prop-types'
 import getThemeColor from '../../utils/getThemeColor'
 
 import * as S from './styled'
+import Profile from "../Profile"
 
 const PostMain = ({ category, title, description, author, date, timeToRead, slug, featuredImage }) => {
   const { img } = useStaticQuery(graphql`
@@ -29,15 +30,12 @@ const PostMain = ({ category, title, description, author, date, timeToRead, slug
     >
       <S.PostItemWrapper>
         <S.PostItemInfo>
-          <S.PostItemProfile>
-            <S.PostItemProfilePhotoWrapper>
-              <S.PostItemProfilePhoto fixed={img.childImageSharp.fixed}/>
-            </S.PostItemProfilePhotoWrapper>
-            <S.PostItemProfileInfo>
-              <S.PostItemProfileName>{author}</S.PostItemProfileName>
-              <S.PostItemDate>{date} • {timeToRead} min de leitura</S.PostItemDate>
-            </S.PostItemProfileInfo>
-          </S.PostItemProfile>
+          <Profile
+            authorImage={img.childImageSharp.fixed}
+            author={author}
+            date={date}
+            timeToRead={timeToRead}
+          />
           <S.PostItemTitle>{title}</S.PostItemTitle>
           <S.PostItemDescription>{description}</S.PostItemDescription>
         </S.PostItemInfo>

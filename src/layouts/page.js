@@ -6,6 +6,7 @@ import Navbar from '../components/Navbar'
 import GlobalStyles from '../styles/global'
 import Main from '../styles/main'
 import LayoutWrapper from '../styles/layout'
+import QuickMenu from '../components/QuickMenu'
 
 const Layout = ({ children }) => {
   return (
@@ -13,6 +14,7 @@ const Layout = ({ children }) => {
       <GlobalStyles/>
       <TransitionPortal level="top">
         <Navbar />
+        <QuickMenu />
       </TransitionPortal>
       <Main>
         {children}
