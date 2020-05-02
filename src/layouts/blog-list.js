@@ -11,7 +11,6 @@ import * as S from '../components/PostList/styled'
 
 const BlogList = props => {
   const postList = props.data.allMarkdownRemark.edges;
-  const mainPost = postList[0].node;
 
   const { currentPage, numPages } = props.pageContext;
   const isFirst = currentPage === 1;
@@ -26,18 +25,7 @@ const BlogList = props => {
         description={``}
         keywords={[`blog`, `devops`, `tecnologias`, `kubernetes`, `AWS`]}
       />
-      <S.PostMainWrapper>
-        <PostMain
-          title={mainPost.frontmatter.title}
-          description={mainPost.frontmatter.description}
-          category={mainPost.frontmatter.category}
-          timeToRead={mainPost.timeToRead}
-          author={mainPost.frontmatter.author}
-          date={mainPost.frontmatter.date}
-          slug={mainPost.fields.slug}
-          featuredImage={mainPost.frontmatter.featuredImage.childImageSharp.fluid}
-        />
-      </S.PostMainWrapper>
+
       <S.ListWrapper>
         {postList.map((
           {
@@ -75,7 +63,21 @@ const BlogList = props => {
               />
             );
           } else {
-            return (<></>);
+            return (
+              <S.PostMainWrapper>
+                <PostMain
+                  key={slug}
+                  title={title}
+                  description={description}
+                  category={category}
+                  timeToRead={timeToRead}
+                  author={author}
+                  date={date}
+                  slug={slug}
+                  featuredImage={fluid}
+                />
+              </S.PostMainWrapper>
+            );
           }
         })}
       </S.ListWrapper>

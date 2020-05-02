@@ -5,7 +5,7 @@ import AniLink from 'gatsby-plugin-transition-link/AniLink'
 export const PostItemLink = styled(AniLink)`
   text-decoration: none;
   width: 31%;
-  margin: 0 1%;
+  margin: 0 1% 2rem;
   color: var(--texts);
 `;
 
@@ -21,7 +21,7 @@ export const PostItemImage = styled.div`
 `;
 
 export const Image = styled(Img)`
-  max-height: 175px;
+  height: 175px;
   background-position: 50% 50%;
   background-size: cover;
 `;
