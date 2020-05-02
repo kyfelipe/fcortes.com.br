@@ -17,6 +17,7 @@ const BlogList = props => {
   const isLast = currentPage === numPages;
   const prevPage = currentPage -1 === 1 ? '/' : `/page/${currentPage - 1}`;
   const nextPage = `/page/${currentPage + 1}`;
+  const hasOnePage = isFirst && isLast;
 
   return (
     <Layout>
@@ -81,14 +82,16 @@ const BlogList = props => {
           }
         })}
       </S.ListWrapper>
-      <Pagination
-        isFirst={isFirst}
-        isLast={isLast}
-        currentPage={currentPage}
-        numPages={numPages}
-        prevPage={prevPage}
-        nextPage={nextPage}
-      />
+      {!hasOnePage &&
+        <Pagination
+          isFirst={isFirst}
+          isLast={isLast}
+          currentPage={currentPage}
+          numPages={numPages}
+          prevPage={prevPage}
+          nextPage={nextPage}
+        />
+      }
     </Layout>
   );
 }

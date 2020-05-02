@@ -3,8 +3,7 @@ import { Moon, Sun } from 'styled-icons/boxicons-solid'
 import { Search } from 'styled-icons/boxicons-regular'
 import { Github, LinkedinSquare } from 'styled-icons/boxicons-logos'
 
-import logoPath from '../../../static/assets/img/logo.svg'
-import logoWhitePath from '../../../static/assets/img/logo-white.svg'
+import Logo from '../Logo'
 import getThemeColor from '../../utils/getThemeColor'
 
 import * as S from './styled'
@@ -32,21 +31,7 @@ const Navbar = () => {
   return (
     <S.NavbarWrapper>
       <S.NavbarContent>
-        <S.LogoWrapper
-          cover
-          direction="bottom"
-          bg={getThemeColor()}
-          duration={0.6}
-          to="/"
-        >
-          <S.LogoLink className={'no-animate'}>
-            <S.Logo title="" src={isLightMode ? logoPath : logoWhitePath} />
-          </S.LogoLink>
-          <S.LogoName className={'no-animate'}>
-            Felipe<br/>
-            Côrtes
-          </S.LogoName>
-        </S.LogoWrapper>
+        <Logo isLightMode={isLightMode}/>
         <S.LinkWrapper>
           {links.map((link, i) => (
             <S.NavbarLink
@@ -73,7 +58,7 @@ const Navbar = () => {
           </S.FeatureWrapper>
           <S.SocialWrapper>
             <S.Icon title="Github">
-              <a target="-_blank" rel="noopener noreferrer" href="https://github.com/kyfelipe">
+              <a target="_blank" rel="noopener noreferrer" href="https://github.com/kyfelipe">
                 <Github />
               </a>
             </S.Icon>

@@ -1,9 +1,14 @@
 import styled from 'styled-components'
+import media from 'styled-media-query'
 
 export const PostWrapper = styled.div`
   position: relative;
   width: 730px;
   margin: 0 auto 0;
+  
+  ${media.lessThan("large")`
+    width: 100%;
+  `}
 `;
 
 export const PostHeader = styled.div`
@@ -16,6 +21,10 @@ export const PostTitle = styled.h1`
   font-size: 2.5rem;
   font-weight: 700;
   margin-bottom: 1rem;
+  
+  ${media.lessThan("large")`
+    font-size: 2rem;
+  `}
 `;
 
 export const PostDescription = styled.h2`
@@ -23,6 +32,10 @@ export const PostDescription = styled.h2`
   font-size: 1.5rem;
   font-weight: 200;
   margin-bottom: 1.25rem;
+  
+  ${media.lessThan("large")`
+    font-size: 1.25rem;
+  `}
 `;
 
 export const MainContent = styled.div`
