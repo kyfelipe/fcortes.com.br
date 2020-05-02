@@ -145,4 +145,9 @@ export const MenuOverlay = styled.div`
 	background: rgba(#000, 0.1);
 	position: absolute;
 	z-index: 100;
+	
+	&[hidden] {
+		width: 0;
+		height: 0;
+	}
 `;

@@ -40,7 +40,7 @@ const QuickMenu = () => {
       </S.MenuButton>
       <S.MenuBody id="menu_body" hidden>
         <S.MenuHeader>
-          <Logo isLightMode={isLightMode}/>
+          {/*<Logo isLightMode={isLightMode}/>*/}
           <S.MenuCloseButton onClick={() => hideMenu()} id="menu_close" title="Close">
             <Close />
           </S.MenuCloseButton>

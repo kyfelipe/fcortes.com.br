@@ -22,7 +22,8 @@ export const PostItemWrapper = styled.div`
   justify-content: space-between;
   
   ${media.lessThan("large")`
-    flex-direction: row-reverse;
+    flex-direction: row;
+    justify-content: flex-start;
   `}
 `;
 
@@ -31,7 +32,7 @@ export const PostItemImage = styled.div`
   
   ${media.lessThan("large")`
     width: auto;
-    margin-left: .35rem;
+    margin-right: .75rem;
   `}
 `;
 
@@ -67,6 +68,7 @@ export const PostItemTitle = styled.h2`
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     font-weight: normal;
+    margin-top: 0;
   `}
 `;
 
