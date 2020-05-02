@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import media from 'styled-media-query'
 
 export const CommentsWrapper = styled.section`
   margin: auto;
@@ -14,6 +15,11 @@ export const CommentsWrapper = styled.section`
       color: #1B68BF !important;
     }
   }
+  
+  ${media.lessThan("large")`
+    padding: 0;
+    margin-top: 2.5rem;
+  `}
 `
 
 export const CommentsTitle = styled.h2`
@@ -21,4 +27,8 @@ export const CommentsTitle = styled.h2`
   font-size: 2.1rem;
   font-weight: 700;
   padding-bottom: 2rem;
+  
+  ${media.lessThan("large")`
+    font-size: 1.75rem;
+  `}
 `
