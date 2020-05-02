@@ -18,30 +18,6 @@ export const PostItemWrapper = styled.div`
   width: 100%;
 `;
 
-export const PostItemProfile = styled.div`
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-`;
-
-export const PostItemProfilePhotoWrapper = styled.div`
-  display: flex;
-  align-items: center;
-  border-radius: 50%;
-  border: 2px solid #1B68BF;
-  padding: 2px;
-`;
-
-export const PostItemProfilePhoto = styled(Img)`
-  border-radius: 50%;
-`;
-
-export const PostItemProfileInfo = styled.div`
-  display: flex;
-  flex-direction: column;
-  margin-left: .75rem;
-`;
-
 export const PostItemImage = styled.div`
   margin-right: 14px;
   width: 455px;
@@ -63,18 +39,10 @@ export const PostItemInfo = styled.div`
 
 export const PostItemTitle = styled.h2`
   font-family: 'Merriweather', sans-serif;
-  font-size: 3rem;
+  font-size: 2.75rem;
   font-weight: bold;
   margin: 1.5rem 0 1rem;
   width: 92%;
-`;
-
-export const PostItemDate = styled.div`
-  font-size: .95rem;
-`;
-
-export const PostItemProfileName = styled.div`
-  font-weight: 700;
 `;
 
 export const PostItemDescription = styled.div`

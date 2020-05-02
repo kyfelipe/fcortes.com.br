@@ -3,6 +3,7 @@ import styled from 'styled-components'
 export const ListWrapper = styled.div`
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: center;
   margin-bottom: 3rem;
 `;
