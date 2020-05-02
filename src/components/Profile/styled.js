@@ -1,5 +1,6 @@
-import styled from "styled-components"
-import Img from "gatsby-image"
+import styled from 'styled-components'
+import media from 'styled-media-query'
+import Img from 'gatsby-image'
 
 export const ProfileWrapper = styled.div`
   width: 100%;
@@ -14,10 +15,18 @@ export const ProfileImageWrapper = styled.div`
   border-radius: 50%;
   border: 2px solid var(--highlight);
   padding: 2px;
+  
+  ${media.lessThan("large")`
+    padding: 0;
+  `}
 `;
 
 export const ProfileImage = styled(Img)`
   border-radius: 50%;
+  
+  ${media.lessThan("large")`
+    transform: scale(0.9);
+  `}
 `;
 
 export const Profile = styled.div`
@@ -33,10 +42,18 @@ export const Author = styled.p`
   font-size: 1rem;
   line-height: 1.5rem;
   font-weight: 600;
+  
+  ${media.lessThan("large")`
+    font-size: .9rem;
+  `}
 `;
 
 export const Date = styled.p`
   font-size: 1rem;
   font-weight: 300;
   color: var(--texts);
+  
+  ${media.lessThan("large")`
+    font-size: .9rem;
+  `}
 `;

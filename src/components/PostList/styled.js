@@ -4,10 +4,9 @@ export const ListWrapper = styled.div`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  margin-bottom: 3rem;
+  margin-bottom: 1.5rem;
 `;
 
 export const PostMainWrapper = styled.div`
-  height: 28rem;
-  padding-top: 3rem;
+  margin: 3rem 0;
 `;

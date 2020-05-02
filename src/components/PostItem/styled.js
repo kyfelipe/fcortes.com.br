@@ -66,6 +66,7 @@ export const PostItemTitle = styled.h2`
     line-height: 1.15;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
+    font-weight: normal;
   `}
 `;
 
