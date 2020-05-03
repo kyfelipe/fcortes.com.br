@@ -1,6 +1,6 @@
 import React from 'react'
-import Layout from "../layouts/page"
-import SEO from "../components/seo"
+import Layout from '../layouts/page'
+import SEO from '../components/seo'
 
 const SobreMim = () => {
   return (
