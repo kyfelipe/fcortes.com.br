@@ -9,7 +9,7 @@ import LayoutWrapper from '../styles/layout'
 import QuickMenu from '../components/QuickMenu'
 
 const Layout = ({ children }) => {
-  const isPost = window.location.href.split('/')[3] === 'post';
+  const isPost =  typeof window !== 'undefined' && window.location.href.split('/')[3] === 'post';
 
   return (
     <LayoutWrapper>
