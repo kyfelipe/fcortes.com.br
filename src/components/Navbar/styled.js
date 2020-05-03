@@ -5,10 +5,6 @@ import AniLink from 'gatsby-plugin-transition-link/AniLink'
 export const NavbarWrapper = styled.div`
   box-shadow: 0 4px 12px 0 var(--navbarShadow);
   width: 100vw;
-  
-  ${media.lessThan("large")`
-    display: none;
-  `}
 `;
 
 export const NavbarContent = styled.div`
@@ -38,6 +34,10 @@ export const NavbarLink = styled(AniLink)`
   &.active {
     color: var(--highlight);
   }
+  
+  ${media.lessThan("large")`
+    display: none;
+  `}
 `;
 
 export const FeatureWrapper = styled.div`
@@ -45,6 +45,11 @@ export const FeatureWrapper = styled.div`
   display: flex;
   flex-direction: row;
   margin-left: .15rem;
+  
+  ${media.lessThan("large")`
+    border-left: none;
+    flex-direction: row-reverse;
+  `}
 `;
 
 export const SocialWrapper = styled.div`
@@ -52,6 +57,10 @@ export const SocialWrapper = styled.div`
   display: flex;
   flex-direction: row;
   margin-left: .5rem;
+  
+  ${media.lessThan("large")`
+    display: none;
+  `}
 `;
 
 export const Icon = styled.div`

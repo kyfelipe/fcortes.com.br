@@ -9,7 +9,6 @@ const Main = styled.main`
   
   ${media.lessThan("large")`
     width: 95%;
-    margin-top: 0;
   `}
 `;
 
