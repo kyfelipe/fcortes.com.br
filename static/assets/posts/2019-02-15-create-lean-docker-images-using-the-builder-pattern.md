@@ -1,7 +1,7 @@
 ---
 date: 2019-02-15 05:54:23
 title: Create lean Docker images using the Builder Pattern
-description: ""
+description: Spend his whole life in disguise?
 author: Felipe Côrtes
 category: css
 featuredImage: ../img/12.jpg
