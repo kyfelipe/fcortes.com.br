@@ -46,16 +46,6 @@ const Navbar = () => {
               {link.name}
             </S.NavbarLink>
           ))}
-          <S.FeatureWrapper>
-            <S.Icon>
-              <Search />
-            </S.Icon>
-            <S.Icon title="Mudar tema" onClick={() => {
-              window.__setPreferredTheme(isLightMode ? 'dark' : 'light')
-            }}>
-              {isLightMode ? <Moon /> : <Sun />}
-            </S.Icon>
-          </S.FeatureWrapper>
           <S.SocialWrapper>
             <S.Icon title="Github">
               <a target="_blank" rel="noopener noreferrer" href="https://github.com/kyfelipe">
@@ -68,6 +58,16 @@ const Navbar = () => {
               </a>
             </S.Icon>
           </S.SocialWrapper>
+          <S.FeatureWrapper>
+            <S.Icon title="Mudar tema" onClick={() => {
+              window.__setPreferredTheme(isLightMode ? 'dark' : 'light')
+            }}>
+              {isLightMode ? <Moon /> : <Sun />}
+            </S.Icon>
+            <S.Icon>
+              <Search />
+            </S.Icon>
+          </S.FeatureWrapper>
         </S.LinkWrapper>
       </S.NavbarContent>
     </S.NavbarWrapper>
