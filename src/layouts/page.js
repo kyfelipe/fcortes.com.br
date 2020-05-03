@@ -9,6 +9,8 @@ import LayoutWrapper from '../styles/layout'
 import QuickMenu from '../components/QuickMenu'
 
 const Layout = ({ children }) => {
+  const isPost = window.location.href.split('/')[3] === 'post';
+
   return (
     <LayoutWrapper>
       <GlobalStyles/>
@@ -18,9 +20,11 @@ const Layout = ({ children }) => {
       <Main>
         {children}
       </Main>
-      <TransitionPortal level="top">
-        <QuickMenu />
-      </TransitionPortal>
+      {isPost &&
+        <TransitionPortal level="top">
+          <QuickMenu />
+        </TransitionPortal>
+      }
     </LayoutWrapper>
   )
 }

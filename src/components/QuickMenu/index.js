@@ -10,8 +10,6 @@ const QuickMenu = () => {
   const menu = document.getElementById("menu");
 
   function swapStateMenu() {
-    console.log('oi');
-
     if (isHiddenMenu) {
       showMenu();
     } else {

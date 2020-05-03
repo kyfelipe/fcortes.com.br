@@ -33,7 +33,7 @@ const BlogPost = ({ data }) => {
       </S.PostWrapper>
       <Comments url={post.fields.slug} title={post.frontmatter.title}/>
     </Layout>
-  )
+  );
 }
 
 export const query = graphql`

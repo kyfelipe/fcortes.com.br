@@ -5,7 +5,7 @@ import * as S from './styled'
 
 const FloatButton = ({ funcSwapMenu }) => (
   <S.FloatWrapper onClick={funcSwapMenu}>
-    <S.FloatShadow />
+    {/*<S.FloatShadow />*/}
     <S.FloatButton>
       <S.Icon>
         <Menu />
