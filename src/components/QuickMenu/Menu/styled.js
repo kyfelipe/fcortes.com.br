@@ -36,6 +36,7 @@ export const FeatureIcon = styled.div`
 `;
 
 export const ArrowIcon = styled(UpArrowAlt)`
-  height: 100%;
+  height: 90%;
+  margin-top: 1%;
   width: auto;
 `;
