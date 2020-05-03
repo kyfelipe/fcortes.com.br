@@ -4,7 +4,6 @@ import { Search } from 'styled-icons/boxicons-regular'
 import { Github, LinkedinSquare } from 'styled-icons/boxicons-logos'
 
 import Logo from '../Logo'
-import getThemeColor from '../../utils/getThemeColor'
 
 import * as S from './styled'
 
@@ -35,10 +34,6 @@ const Navbar = () => {
         <S.LinkWrapper>
           {links.map((link, i) => (
             <S.NavbarLink
-              cover
-              direction="top"
-              bg={getThemeColor()}
-              duration={0.6}
               key={i}
               to={link.path}
               activeClassName="active"
