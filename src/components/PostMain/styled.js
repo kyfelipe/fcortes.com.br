@@ -34,7 +34,7 @@ export const PostItemImage = styled.div`
   
   ${media.lessThan("large")`
     width: 100%;
-    height: 210px;
+    height: 200px;
   `}
 `;
 
@@ -62,22 +62,18 @@ export const PostItemTitle = styled.h2`
   font-weight: bold;
   margin: 1.5rem 0 1rem;
   width: 92%;
-  line-height: 1.2;
   
   ${media.lessThan("large")`
     font-weight: normal;
     font-size: 1.75rem;
     margin-top: 1rem;
-    margin-bottom: .75rem;
   `}
 `;
 
 export const PostItemDescription = styled.div`
   width: 92%;
-  color: var(--mediumTexts);
   
   ${media.lessThan("large")`
-    font-size: 0.9;
-    margin-bottom: .75rem;
+    display: none;
   `}
 `;

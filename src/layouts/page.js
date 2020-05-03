@@ -14,13 +14,11 @@ const Layout = ({ children }) => {
       <GlobalStyles/>
       <TransitionPortal level="top">
         <Navbar />
+        <QuickMenu />
       </TransitionPortal>
       <Main>
         {children}
       </Main>
-      <TransitionPortal level="top">
-        <QuickMenu />
-      </TransitionPortal>
     </LayoutWrapper>
   )
 }

@@ -10,42 +10,42 @@ export const LogoWrapper = styled(AniLink)`
 `;
 
 export const LogoLink = styled.div`
-  --initial-margin: 14px;
-  --final-margin: 14px;
+  --initial-padding: 14px;
+  --final-padding: 14px;
   z-index: 2;
   background-color: var(--background);
-  -webkit-animation: margin-right 500ms cubic-bezier(0.250, 0.460, 0.450, 0.940) 300ms both;
-  animation: margin-right 500ms cubic-bezier(0.250, 0.460, 0.450, 0.940) 300ms both;
+  -webkit-animation: padding-right 500ms cubic-bezier(0.250, 0.460, 0.450, 0.940) 300ms both;
+  animation: padding-right 500ms cubic-bezier(0.250, 0.460, 0.450, 0.940) 300ms both;
   
-  @-webkit-keyframes margin-right {
+  @-webkit-keyframes padding-right {
     0% {
-      padding-right: var(--initial-margin);
+      padding-right: var(--initial-padding);
     }
     
     100% {
-      padding-right: var(--final-margin);
+      padding-right: var(--final-padding);
     }
   }
   
-  @keyframes margin-right {
+  @keyframes padding-right {
     0% {
-      margin-right: var(--initial-margin);
+      padding-right: var(--initial-padding);
     }
     
     100% {
-      margin-right: var(--final-margin);
+      padding-right: var(--final-padding);
     }
   }
   
   &.no-animate {
     -webkit-animation: none;
     animation: none;
-    margin-right: var(--final-margin);
+    padding-right: var(--final-padding);
   }
   
   ${media.lessThan("large")`
     height: 2rem;
-    margin-right: 10px!important;
+    padding-right: 10px!important;
   `}
 `;
 
