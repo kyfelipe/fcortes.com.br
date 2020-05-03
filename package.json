@@ -2,7 +2,7 @@
   "name": "fcortes.com.br",
   "private": true,
   "description": "Um blog sobre a cultura e tecnologias do mundo devops",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "author": "Felipe Côrtes <contatos.cortes@gmail.com>",
   "dependencies": {
     "gatsby": "^2.21.1",
@@ -10,6 +10,7 @@
     "gatsby-plugin-google-fonts": "^1.0.1",
     "gatsby-plugin-manifest": "^2.3.3",
     "gatsby-plugin-offline": "^3.1.2",
+    "gatsby-plugin-page-progress": "^2.0.16",
     "gatsby-plugin-react-helmet": "^3.2.2",
     "gatsby-plugin-sharp": "^2.5.3",
     "gatsby-plugin-sitemap": "^2.3.3",

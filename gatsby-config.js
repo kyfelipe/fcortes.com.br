@@ -35,6 +35,16 @@ module.exports = {
       }
     },
     {
+      resolve: "gatsby-plugin-page-progress",
+      options: {
+        includePaths: [{ regex: "^/post" }],
+        excludePaths: [""],
+        height: 3,
+        prependToBody: false,
+        color: `var(--highlight)`
+      }
+    },
+    {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
@@ -55,7 +65,7 @@ module.exports = {
           {
             resolve: `gatsby-remark-images-zoom`,
             options: {
-              zIndex: 9999,
+              zIndex: 10,
               background: `var(--background)`
             }
           },

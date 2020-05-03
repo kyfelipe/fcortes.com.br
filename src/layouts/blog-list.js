@@ -59,7 +59,7 @@ const BlogList = props => {
                 timeToRead={timeToRead}
                 author={author}
                 date={date}
-                slug={slug}
+                slug={'/post' + slug}
                 featuredImage={fluid}
               />
             );
@@ -74,7 +74,7 @@ const BlogList = props => {
                   timeToRead={timeToRead}
                   author={author}
                   date={date}
-                  slug={slug}
+                  slug={'/post' + slug}
                   featuredImage={fluid}
                 />
               </S.PostMainWrapper>

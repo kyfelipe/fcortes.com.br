@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import media from 'styled-media-query'
+import { UpArrowAlt } from 'styled-icons/boxicons-regular'
 
 export const MenuWrapper = styled.div`
   position: fixed;
@@ -17,4 +18,24 @@ export const MenuWrapper = styled.div`
   ${media.greaterThan("medium")`
     display: none;
   `}
+`;
+
+export const FeatureWrapper = styled.div`
+  display: flex;
+  width: 80%;
+  height: 38px;
+  margin: 2px;
+  overflow-x: auto;
+`;
+
+export const FeatureIcon = styled.div`
+  flex: 1 1 1px;
+  color: var(--texts);
+  margin: 0 2px;
+  cursor: pointer;
+`;
+
+export const ArrowIcon = styled(UpArrowAlt)`
+  height: 100%;
+  width: auto;
 `;

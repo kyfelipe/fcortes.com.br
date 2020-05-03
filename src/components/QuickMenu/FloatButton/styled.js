@@ -7,7 +7,7 @@ export const FloatWrapper = styled.div`
   bottom: 20px;
   right: 20px;
   cursor: pointer;
-  z-index: 1;
+  z-index: 20;
   
   ${media.greaterThan("medium")`
     display: none;
@@ -16,24 +16,26 @@ export const FloatWrapper = styled.div`
 
 export const FloatShadow = styled.div`
   position: absolute;
-  width: 52px;
-  height: 52px;
+  width: 54px;
+  height: 54px;
   padding: 12px;
   border-radius: 50%;
-  left: -2px;
-  z-index: 2;
+  left: -3px;
+  bottom: -3px;
+  z-index: 21;
   background-color: var(--background);
 `;
 
 export const FloatButton = styled.div`
   padding: 12px;
   border-radius: 50%;
-  z-index: 3;
+  z-index: 22;
   background: linear-gradient(to right, var(--highlight), var(--link));
+  box-shadow: 0 0 12px 0 var(--navbarShadow);
 `;
 
 export const Icon = styled.div`
-  color: var(--texts);
+  color: var(--white);
   width: 24px;
   height: 24px;
 `;
