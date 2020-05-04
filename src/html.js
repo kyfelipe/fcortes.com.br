@@ -52,8 +52,18 @@ export default function HTML(props) {
                 post.classList.remove('normal');
                 post.classList.remove('small');
                 post.classList.remove('large');
-                
                 post.classList.add(newFontSize);
+                
+                fontSmall = document.getElementById("font_small");
+                fontNormal = document.getElementById("font_normal");
+                fontLarge = document.getElementById("font_large");
+                fontSmall.classList.remove('active');
+                fontNormal.classList.remove('active');
+                fontLarge.classList.remove('active');
+                
+                font = document.getElementById("font_" + newFontSize);
+                font.classList.add('active');
+                
                 window.__onFontSizeChange(newFontSize);
               }
               
