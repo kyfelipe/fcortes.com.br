@@ -96,6 +96,13 @@ const GlobalStyles = createGlobalStyle`
     --black: #212121;
     --navbarShadow: rgba(0, 0, 0, 0.05);
   }
+  
+  // Font
+  body {
+    --fontSmall: 14px;
+    --fontMedium: 16px;
+    --fontLarge: 18px;
+  }
 `;
 
 export default GlobalStyles;
