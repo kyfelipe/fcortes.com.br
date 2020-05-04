@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react"
 import { graphql } from 'gatsby'
 
 import Layout from './page'
@@ -8,8 +8,13 @@ import Comments from '../components/Comments'
 
 import * as S from '../components/Post/styled'
 
+const getFontSize = () => {
+  return typeof window !== 'undefined' && window.localStorage.getItem("font_size");
+}
+
 const BlogPost = ({ data }) => {
   const post = data.markdownRemark;
+  const fontSize = getFontSize();
 
   return (
     <Layout>
@@ -19,9 +24,9 @@ const BlogPost = ({ data }) => {
         keywords={post.frontmatter.category.split(',')}
       />
       <S.PostWrapper>
-        <S.PostHeader className={window.__fontSize}>
-          <S.PostTitle>{post.frontmatter.title}</S.PostTitle>
-          <S.PostDescription>{post.frontmatter.description}</S.PostDescription>
+        <S.PostHeader>
+          <S.PostTitle id="post_title" className={fontSize}>{post.frontmatter.title}</S.PostTitle>
+          <S.PostDescription id="post_description" className={fontSize}>{post.frontmatter.description}</S.PostDescription>
           <Profile
             authorImage={data.authorImage.childImageSharp.fixed}
             author={post.frontmatter.author}
@@ -29,7 +34,7 @@ const BlogPost = ({ data }) => {
             timeToRead={post.timeToRead}
           />
         </S.PostHeader>
-        <S.MainContent id="post" className={window.__fontSize} dangerouslySetInnerHTML={{ __html: post.html }}/>
+        <S.MainContent id="post_body" className={fontSize} dangerouslySetInnerHTML={{ __html: post.html }}/>
       </S.PostWrapper>
       <Comments url={post.fields.slug} title={post.frontmatter.title}/>
     </Layout>

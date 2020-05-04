@@ -48,11 +48,23 @@ export default function HTML(props) {
                 window.__fontSize = newFontSize;
                 preferredFontSize = newFontSize;
                 
-                post = document.getElementById("post");
-                post.classList.remove('normal');
-                post.classList.remove('small');
-                post.classList.remove('large');
-                post.classList.add(newFontSize);
+                postBody = document.getElementById("post_body");
+                postBody.classList.remove('normal');
+                postBody.classList.remove('small');
+                postBody.classList.remove('large');
+                postBody.classList.add(newFontSize);
+                
+                postTitle = document.getElementById("post_title");
+                postTitle.classList.remove('normal');
+                postTitle.classList.remove('small');
+                postTitle.classList.remove('large');
+                postTitle.classList.add(newFontSize);
+                
+                postDescription = document.getElementById("post_description");
+                postDescription.classList.remove('normal');
+                postDescription.classList.remove('small');
+                postDescription.classList.remove('large');
+                postDescription.classList.add(newFontSize);
                 
                 fontSmall = document.getElementById("font_small");
                 fontNormal = document.getElementById("font_normal");
@@ -77,6 +89,10 @@ export default function HTML(props) {
                 try {
                   localStorage.setItem('font_size', newFontSize);
                 } catch (err) {}
+              }
+              
+              function getFontSize() {
+                return preferredFontSize;
               }
               
               setFontSize(preferredFontSize || 'normal');
