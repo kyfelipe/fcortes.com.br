@@ -37,6 +37,7 @@ const Menu = () => {
         </S.FeatureIcon>
         <S.FontSizeWrapper id="font_size_wrapper" hidden>
           <S.FontSizeType
+            id="font_small"
             className={isSmallFont ? 'active' : ''}
             onClick={() =>
               isSmallFont ? '' : window.__setPreferredFontSize('small')
@@ -45,6 +46,7 @@ const Menu = () => {
             P
           </S.FontSizeType>
           <S.FontSizeType
+            id="font_normal"
             className={isNormalFont ? 'active' : ''}
             onClick={() =>
               isNormalFont ? '' : window.__setPreferredFontSize('normal')
@@ -53,6 +55,7 @@ const Menu = () => {
             M
           </S.FontSizeType>
           <S.FontSizeType
+            id="font_large"
             className={isLargeFont ? 'active' : ''}
             onClick={() =>
               isLargeFont ? '' : window.__setPreferredFontSize('large')

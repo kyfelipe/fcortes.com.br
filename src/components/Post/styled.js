@@ -48,15 +48,15 @@ export const MainContent = styled.div`
   border-bottom: 1px solid var(--mediumTexts);
   
   &.small {
-    font-size: 14px;
+    font-size: var(--fontSmall);
   }
   
   &.normal {
-    font-size: 16px;
+    font-size: var(--fontMedium);
   }
   
   &.large {
-    font-size: 18px;
+    font-size: var(--fontLarge);
   }
   
   p, h1, h2, h3, h4, ul, ol, .tags, iframe, .button-post {
