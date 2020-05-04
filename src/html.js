@@ -49,15 +49,21 @@ export default function HTML(props) {
                 preferredFontSize = newFontSize;
                 
                 post = document.getElementById("post");
-                if (post.classList.contains('normal')) {
-                  post.classList.remove('normal');
-                } else if (post.classList.contains('small')) {
-                  post.classList.remove('small');
-                } else if (post.classList.contains('large')) {
-                  post.classList.remove('large');
-                }
-                
+                post.classList.remove('normal');
+                post.classList.remove('small');
+                post.classList.remove('large');
                 post.classList.add(newFontSize);
+                
+                fontSmall = document.getElementById("font_small");
+                fontNormal = document.getElementById("font_normal");
+                fontLarge = document.getElementById("font_large");
+                fontSmall.classList.remove('active');
+                fontNormal.classList.remove('active');
+                fontLarge.classList.remove('active');
+                
+                font = document.getElementById("font_" + newFontSize);
+                font.classList.add('active');
+                
                 window.__onFontSizeChange(newFontSize);
               }
               

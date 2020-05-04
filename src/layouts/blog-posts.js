@@ -19,7 +19,7 @@ const BlogPost = ({ data }) => {
         keywords={post.frontmatter.category.split(',')}
       />
       <S.PostWrapper>
-        <S.PostHeader>
+        <S.PostHeader className={window.__fontSize}>
           <S.PostTitle>{post.frontmatter.title}</S.PostTitle>
           <S.PostDescription>{post.frontmatter.description}</S.PostDescription>
           <Profile
@@ -29,7 +29,7 @@ const BlogPost = ({ data }) => {
             timeToRead={post.timeToRead}
           />
         </S.PostHeader>
-        <S.MainContent id="post" className="normal" dangerouslySetInnerHTML={{ __html: post.html }}/>
+        <S.MainContent id="post" className={window.__fontSize} dangerouslySetInnerHTML={{ __html: post.html }}/>
       </S.PostWrapper>
       <Comments url={post.fields.slug} title={post.frontmatter.title}/>
     </Layout>

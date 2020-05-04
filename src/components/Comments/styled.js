@@ -19,6 +19,7 @@ export const CommentsWrapper = styled.section`
   ${media.lessThan("large")`
     padding: 0;
     margin-top: 2.5rem;
+    margin-bottom: 1rem;
   `}
 `
 
