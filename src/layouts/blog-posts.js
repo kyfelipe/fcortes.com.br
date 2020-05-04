@@ -29,7 +29,7 @@ const BlogPost = ({ data }) => {
             timeToRead={post.timeToRead}
           />
         </S.PostHeader>
-        <S.MainContent dangerouslySetInnerHTML={{ __html: post.html }}/>
+        <S.MainContent id="post" className="normal" dangerouslySetInnerHTML={{ __html: post.html }}/>
       </S.PostWrapper>
       <Comments url={post.fields.slug} title={post.frontmatter.title}/>
     </Layout>

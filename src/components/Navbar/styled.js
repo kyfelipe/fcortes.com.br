@@ -44,11 +44,11 @@ export const FeatureWrapper = styled.div`
   border-left: 1px solid var(--texts);
   display: flex;
   flex-direction: row;
-  margin-left: .15rem;
+  margin: 0 .75rem 0 .2rem;
   
   ${media.lessThan("large")`
     border-left: none;
-    flex-direction: row-reverse;
+    margin: 0;
   `}
 `;
 
@@ -56,7 +56,7 @@ export const SocialWrapper = styled.div`
   border-left: 1px solid var(--texts);
   display: flex;
   flex-direction: row;
-  margin-left: .5rem;
+  margin: 0 .5rem;
   
   ${media.lessThan("large")`
     display: none;

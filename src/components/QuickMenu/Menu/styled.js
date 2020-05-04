@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import media from 'styled-media-query'
-import { UpArrowAlt } from 'styled-icons/boxicons-regular'
+import { FormatSize, ArrowUpward } from 'styled-icons/material'
 
 export const MenuWrapper = styled.div`
   position: fixed;
@@ -26,16 +26,48 @@ export const FeatureWrapper = styled.div`
   height: 38px;
   margin: 2px;
   overflow-x: auto;
+  align-items: center;
 `;
 
 export const FeatureIcon = styled.div`
-  flex: 1 1 1px;
   color: var(--texts);
-  margin: 0 2px;
+  margin: 0 .35rem;
   cursor: pointer;
 `;
 
-export const ArrowIcon = styled(UpArrowAlt)`
+export const ArrowIcon = styled(ArrowUpward)`
+  height: 32px;
+  width: 32px;
+`;
+
+export const FontSizeIcon = styled(FormatSize)`
+  height: 32px;
+  width: 32px;
+  
+  &.active {
+    fill: var(--highlight);
+  }
+`;
+
+export const FontSizeWrapper = styled.div`
+  display: flex;
   height: 100%;
-  width: auto;
+  align-items: center;
+  color: var(--texts);
+  margin-left: .2rem;
+  border-bottom: var(--highlight) 2px solid;
+  
+  &[hidden] {
+    display: none;
+  }
+`;
+
+export const FontSizeType = styled.span`
+  margin: 0 .5rem;
+  cursor: pointer;
+  
+  &.active {
+    color: var(--link);
+    font-weight: bold;
+  }
 `;
