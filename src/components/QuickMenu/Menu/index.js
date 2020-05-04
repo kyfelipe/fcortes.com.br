@@ -7,21 +7,18 @@ const Menu = () => {
   const [fontSize, setFontSize] = useState(null);
   const fontSizeIcon = document.getElementById("font_size_icon");
   const fontSizeWrapper = document.getElementById("font_size_wrapper");
-  let fontSizeOpen = false;
   const isSmallFont = fontSize === 'small';
   const isNormalFont = fontSize === 'normal';
   const isLargeFont = fontSize === 'large';
 
   const fontSizeMenu = () => {
-    if (fontSizeOpen) {
+    if (fontSizeIcon.classList.contains('active')) {
       fontSizeIcon.classList.remove('active');
       fontSizeWrapper.setAttribute("hidden", "");
     } else {
       fontSizeIcon.classList.add('active');
       fontSizeWrapper.removeAttribute("hidden");
     }
-
-    fontSizeOpen = !fontSizeOpen;
   }
 
   useEffect(() => {
