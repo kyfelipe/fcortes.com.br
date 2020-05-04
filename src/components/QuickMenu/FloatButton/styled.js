@@ -14,18 +14,6 @@ export const FloatWrapper = styled.div`
   `}
 `;
 
-export const FloatShadow = styled.div`
-  position: absolute;
-  width: 54px;
-  height: 54px;
-  padding: 12px;
-  border-radius: 50%;
-  left: -3px;
-  bottom: -3px;
-  z-index: 21;
-  background-color: var(--background);
-`;
-
 export const FloatButton = styled.div`
   padding: 12px;
   border-radius: 50%;

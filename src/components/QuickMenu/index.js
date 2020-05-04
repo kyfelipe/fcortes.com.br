@@ -8,6 +8,8 @@ import * as S from './styled'
 const QuickMenu = () => {
   let isHiddenMenu = true;
   const menu = document.getElementById("menu");
+  const iconOpen = document.getElementById("menu_open_icon");
+  const iconClose = document.getElementById("menu_close_icon");
 
   function swapStateMenu() {
     if (isHiddenMenu) {
@@ -21,10 +23,14 @@ const QuickMenu = () => {
 
   function showMenu() {
     menu.removeAttribute("hidden");
+    iconOpen.setAttribute("hidden", "");
+    iconClose.removeAttribute("hidden");
   }
 
   function hideMenu() {
     menu.setAttribute("hidden", "");
+    iconOpen.removeAttribute("hidden");
+    iconClose.setAttribute("hidden", "");
   }
 
   return (

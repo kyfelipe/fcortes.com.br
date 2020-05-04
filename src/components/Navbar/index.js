@@ -4,7 +4,6 @@ import { Search } from 'styled-icons/boxicons-regular'
 import { Github, LinkedinSquare } from 'styled-icons/boxicons-logos'
 
 import Logo from '../Logo'
-import getThemeColor from '../../utils/getThemeColor'
 
 import * as S from './styled'
 
@@ -35,10 +34,6 @@ const Navbar = () => {
         <S.LinkWrapper>
           {links.map((link, i) => (
             <S.NavbarLink
-              cover
-              direction="top"
-              bg={getThemeColor()}
-              duration={0.6}
               key={i}
               to={link.path}
               activeClassName="active"
@@ -46,16 +41,6 @@ const Navbar = () => {
               {link.name}
             </S.NavbarLink>
           ))}
-          <S.FeatureWrapper>
-            <S.Icon>
-              <Search />
-            </S.Icon>
-            <S.Icon title="Mudar tema" onClick={() => {
-              window.__setPreferredTheme(isLightMode ? 'dark' : 'light')
-            }}>
-              {isLightMode ? <Moon /> : <Sun />}
-            </S.Icon>
-          </S.FeatureWrapper>
           <S.SocialWrapper>
             <S.Icon title="Github">
               <a target="_blank" rel="noopener noreferrer" href="https://github.com/kyfelipe">
@@ -68,6 +53,16 @@ const Navbar = () => {
               </a>
             </S.Icon>
           </S.SocialWrapper>
+          <S.FeatureWrapper>
+            <S.Icon title="Mudar tema" onClick={() => {
+              window.__setPreferredTheme(isLightMode ? 'dark' : 'light')
+            }}>
+              {isLightMode ? <Moon /> : <Sun />}
+            </S.Icon>
+            <S.Icon>
+              <Search />
+            </S.Icon>
+          </S.FeatureWrapper>
         </S.LinkWrapper>
       </S.NavbarContent>
     </S.NavbarWrapper>
