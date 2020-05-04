@@ -22,9 +22,20 @@ export const PostHeader = styled.div`
 export const PostTitle = styled.h1`
   font-family: 'Merriweather', sans-serif;
   color: var(--texts);
-  font-size: 2.5em;
   font-weight: 700;
   margin-bottom: 1rem;
+  
+  &.small {
+    font-size: 2.25rem;
+  }
+  
+  &.normal {
+    font-size: 2.5rem;
+  }
+  
+  &.large {
+    font-size: 2.75rem;
+  }
   
   ${media.lessThan("large")`
     font-size: 2rem;
@@ -33,9 +44,20 @@ export const PostTitle = styled.h1`
 
 export const PostDescription = styled.h2`
   color: var(--mediumTexts);
-  font-size: 1.5em;
   font-weight: 200;
   margin-bottom: 1.25rem;
+  
+  &.small {
+    font-size: 1.25rem;
+  }
+  
+  &.normal {
+    font-size: 1.5rem;
+  }
+  
+  &.large {
+    font-size: 1.75rem;
+  }
   
   ${media.lessThan("large")`
     font-size: 1.25rem;
