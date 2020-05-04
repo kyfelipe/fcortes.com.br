@@ -41,6 +41,39 @@ export default function HTML(props) {
               }
               
               setTheme(preferredTheme || 'light');
+              
+              window.__onFontSizeChange = function() {};
+              
+              function setFontSize(newFontSize) {
+                window.__fontSize = newFontSize;
+                preferredFontSize = newFontSize;
+                
+                post = document.getElementById("post");
+                if (post.classList.contains('normal')) {
+                  post.classList.remove('normal');
+                } else if (post.classList.contains('small')) {
+                  post.classList.remove('small');
+                } else if (post.classList.contains('large')) {
+                  post.classList.remove('large');
+                }
+                
+                post.classList.add(newFontSize);
+                window.__onFontSizeChange(newFontSize);
+              }
+              
+              var preferredFontSize;
+              try {
+                preferredFontSize = localStorage.getItem('font_size');
+              } catch (err) { }
+              
+              window.__setPreferredFontSize = function(newFontSize) {
+                setFontSize(newFontSize);
+                try {
+                  localStorage.setItem('font_size', newFontSize);
+                } catch (err) {}
+              }
+              
+              setFontSize(preferredFontSize || 'normal');
             })();
             `,
         }}

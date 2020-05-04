@@ -13,12 +13,16 @@ export const PostWrapper = styled.div`
 
 export const PostHeader = styled.div`
   margin: 3rem 0 1.75rem;
+  
+  ${media.lessThan("large")`
+    margin-top: 2rem;
+  `}
 `;
 
 export const PostTitle = styled.h1`
   font-family: 'Merriweather', sans-serif;
   color: var(--texts);
-  font-size: 2.5rem;
+  font-size: 2.5em;
   font-weight: 700;
   margin-bottom: 1rem;
   
@@ -29,7 +33,7 @@ export const PostTitle = styled.h1`
 
 export const PostDescription = styled.h2`
   color: var(--mediumTexts);
-  font-size: 1.5rem;
+  font-size: 1.5em;
   font-weight: 200;
   margin-bottom: 1.25rem;
   
@@ -43,9 +47,21 @@ export const MainContent = styled.div`
   padding-bottom: 1rem;
   border-bottom: 1px solid var(--mediumTexts);
   
+  &.small {
+    font-size: 14px;
+  }
+  
+  &.normal {
+    font-size: 16px;
+  }
+  
+  &.large {
+    font-size: 18px;
+  }
+  
   p, h1, h2, h3, h4, ul, ol, .tags, iframe, .button-post {
     color: var(--texts);
-    font-size: 1.25rem;
+    font-size: 1.25em;
     font-weight: 300;
     line-height: 1.7;
     letter-spacing: 0.069rem;
@@ -92,7 +108,7 @@ export const MainContent = styled.div`
     text-align: center;
     margin-top: .5rem;
     font-weight: 300;
-    font-size: 1rem;
+    font-size: 1em;
     font-style: oblique;
   }
   
@@ -127,23 +143,23 @@ export const MainContent = styled.div`
   }
   
   h1 {
-    font-size: 2.8rem;
+    font-size: 2.8em;
   }
   
   h2 {
-    font-size: 2.1rem;
+    font-size: 2.1em;
   }
   
   h3 {
-    font-size: 1.6rem;
+    font-size: 1.6em;
   }
   
   h4 {
-    font-size: 1.4rem;
+    font-size: 1.4em;
   }
   
   h5 {
-    font-size: 1.2rem;
+    font-size: 1.2em;
   }
   
   strong {
