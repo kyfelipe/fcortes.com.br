@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import media from 'styled-media-query'
 
-export const TitleWrapper = styled.h1`
+export const TitleWrapper = styled.div`
   ${media.lessThan("large")`
     display: flex;
     justify-content: space-between;
