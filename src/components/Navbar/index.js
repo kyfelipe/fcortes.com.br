@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react'
 import { Moon, Sun } from 'styled-icons/boxicons-solid'
 import { Search } from 'styled-icons/boxicons-regular'
-import { Github, LinkedinSquare } from 'styled-icons/boxicons-logos'
 
 import Logo from '../Logo'
+import Social from '../Social'
 
 import * as S from './styled'
 
@@ -41,18 +41,9 @@ const Navbar = () => {
               {link.name}
             </S.NavbarLink>
           ))}
-          <S.SocialWrapper>
-            <S.Icon title="Github">
-              <a target="_blank" rel="noopener noreferrer" href="https://github.com/kyfelipe">
-                <Github />
-              </a>
-            </S.Icon>
-            <S.Icon title="LinkedIn">
-              <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/felipe-cortes/">
-                <LinkedinSquare />
-              </a>
-            </S.Icon>
-          </S.SocialWrapper>
+          <S.SocialNav>
+            <Social />
+          </S.SocialNav>
           <S.FeatureWrapper>
             <S.Icon title="Mudar tema" onClick={() => {
               window.__setPreferredTheme(isLightMode ? 'dark' : 'light')
