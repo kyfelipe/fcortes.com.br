@@ -52,11 +52,9 @@ export const FeatureWrapper = styled.div`
   `}
 `;
 
-export const SocialWrapper = styled.div`
+export const SocialNav = styled.div`
   border-left: 1px solid var(--texts);
-  display: flex;
-  flex-direction: row;
-  margin: 0 .5rem;
+  margin-left: .25rem;
   
   ${media.lessThan("large")`
     display: none;

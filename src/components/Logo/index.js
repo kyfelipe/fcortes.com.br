@@ -10,7 +10,7 @@ const Logo = ({ isLightMode }) => {
   return (
     <S.LogoWrapper to="/">
       <S.LogoLink className={'no-animate'}>
-        <S.Logo title="" src={isLightMode ? logoPath : logoWhitePath} />
+        <S.Logo title="Felipe Côrtes logo" src={isLightMode ? logoPath : logoWhitePath} />
       </S.LogoLink>
       <S.LogoName className={'no-animate'}>
         Felipe<br/>
