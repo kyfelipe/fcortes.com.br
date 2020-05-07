@@ -23,6 +23,7 @@ export const PostTitle = styled.h1`
   font-family: 'Merriweather', sans-serif;
   color: var(--texts);
   font-weight: 700;
+  line-height: 1.17;
   margin-bottom: 1rem;
   
   &.small {
