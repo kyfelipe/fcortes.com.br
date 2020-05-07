@@ -6,12 +6,12 @@ import * as S from './styled'
 const Social = () => (
   <S.SocialWrapper>
     <S.Icon title="Github">
-      <a target="_blank" rel="noopener noreferrer" href="https://github.com/kyfelipe">
+      <a target="_blank" aria-label="LinkedIn" rel="noopener noreferrer" href="https://github.com/kyfelipe">
         <Github />
       </a>
     </S.Icon>
     <S.Icon title="LinkedIn">
-      <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/felipe-cortes/">
+      <a target="_blank" aria-label="LinkedIn" rel="noopener noreferrer" href="https://www.linkedin.com/in/felipe-cortes/">
         <LinkedinSquare />
       </a>
     </S.Icon>

@@ -49,32 +49,49 @@ export default function HTML(props) {
                 preferredFontSize = newFontSize;
                 
                 postBody = document.getElementById("post_body");
-                postBody.classList.remove('normal');
-                postBody.classList.remove('small');
-                postBody.classList.remove('large');
-                postBody.classList.add(newFontSize);
+                if (postBody !== null) {
+                  postBody.classList.remove('normal');
+                  postBody.classList.remove('small');
+                  postBody.classList.remove('large');
+                  postBody.classList.add(newFontSize);
+                }
                 
                 postTitle = document.getElementById("post_title");
-                postTitle.classList.remove('normal');
-                postTitle.classList.remove('small');
-                postTitle.classList.remove('large');
-                postTitle.classList.add(newFontSize);
-                
+                if (postTitle !== null) {
+                  postTitle.classList.remove('normal');
+                  postTitle.classList.remove('small');
+                  postTitle.classList.remove('large');
+                  postTitle.classList.add(newFontSize);
+                }
+
                 postDescription = document.getElementById("post_description");
-                postDescription.classList.remove('normal');
-                postDescription.classList.remove('small');
-                postDescription.classList.remove('large');
-                postDescription.classList.add(newFontSize);
+                if (postDescription !== null) {
+                  postDescription.classList.remove('normal');
+                  postDescription.classList.remove('small');
+                  postDescription.classList.remove('large');
+                  postDescription.classList.add(newFontSize);
+                }
                 
                 fontSmall = document.getElementById("font_small");
                 fontNormal = document.getElementById("font_normal");
                 fontLarge = document.getElementById("font_large");
-                fontSmall.classList.remove('active');
-                fontNormal.classList.remove('active');
-                fontLarge.classList.remove('active');
+                
+                if (fontSmall !== null) {
+                  fontSmall.classList.remove('active');
+                }
+
+                if (fontNormal !== null) {
+                  fontNormal.classList.remove('active');
+                }
+                
+                if (fontLarge !== null) {
+                  fontLarge.classList.remove('active');
+                }
                 
                 font = document.getElementById("font_" + newFontSize);
-                font.classList.add('active');
+                if (font !== null) {
+                  font.classList.add('active');
+                }
                 
                 window.__onFontSizeChange(newFontSize);
               }

@@ -25,9 +25,10 @@ export const PostTitle = styled.h1`
   font-weight: 700;
   line-height: 1.17;
   margin-bottom: 1rem;
+  font-size: 2.5rem;
   
   &.small {
-    font-size: 2.25rem;
+    font-size: 2.25rem!important;
   }
   
   &.normal {
@@ -35,7 +36,7 @@ export const PostTitle = styled.h1`
   }
   
   &.large {
-    font-size: 2.75rem;
+    font-size: 2.75rem!important;
   }
   
   ${media.lessThan("large")`
@@ -47,9 +48,10 @@ export const PostDescription = styled.h2`
   color: var(--mediumTexts);
   font-weight: 200;
   margin-bottom: 1.25rem;
+  font-size: 1.5rem;
   
   &.small {
-    font-size: 1.25rem;
+    font-size: 1.25rem!important;
   }
   
   &.normal {
@@ -57,7 +59,7 @@ export const PostDescription = styled.h2`
   }
   
   &.large {
-    font-size: 1.75rem;
+    font-size: 1.75rem!important;
   }
   
   ${media.lessThan("large")`
@@ -68,10 +70,11 @@ export const PostDescription = styled.h2`
 export const MainContent = styled.div`
   margin: auto;
   padding-bottom: 1rem;
+  font-size: var(--fontMedium);
   border-bottom: 1px solid var(--mediumTexts);
   
   &.small {
-    font-size: var(--fontSmall);
+    font-size: var(--fontSmall)!important;
   }
   
   &.normal {
@@ -79,7 +82,7 @@ export const MainContent = styled.div`
   }
   
   &.large {
-    font-size: var(--fontLarge);
+    font-size: var(--fontLarge)!important;;
   }
   
   p, h1, h2, h3, h4, ul, ol, .tags, iframe, .button-post {
