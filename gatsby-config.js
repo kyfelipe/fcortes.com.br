@@ -58,7 +58,7 @@ const plugins = [
         {
           resolve: `gatsby-remark-images-zoom`,
           options: {
-            zIndex: 10,
+            zIndex: 1201,
             background: `var(--background)`
           }
         },
